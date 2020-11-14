@@ -1,4 +1,4 @@
-# Security Policy
+# Política de seguridad
 
 ## Versiones soportadas de php
 
@@ -34,7 +34,7 @@ aqui podrá generar errores, se recomienda solo usar las siguientes
 | 10.1.3   | :white_check_mark: |
 | < 10.x.x | :x:                |
 
-## Reporting a Vulnerability
+## Reporte de vulnerabilidades
 
 Use this section to tell people how to report a vulnerability.
 

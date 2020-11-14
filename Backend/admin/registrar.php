@@ -11,15 +11,15 @@
   $conexion = conexion(); // CREA LA CONEXION
   
   // REALIZA LA QUERY A LA BD
-  mysqli_query($conexion, "INSERT INTO cliente(documento, nombre, telefono, direccion, correo, contrasena) VALUES
-                  ('$datos->documento', '$datos->nombre', '$datos->telefono', '$datos->direccion', '$datos->correo','$datos->contrasena')");    
+  mysqli_query($conexion, "INSERT INTO administrador(documento, nombre, telefono, correo, contrasena) VALUES
+                  ('$datos->documento', '$datos->nombre', '$datos->telefono', '$datos->correo', '$datos->contrasena')");    
   
   class Result {}
 
   // GENERA LOS DATOS DE RESPUESTA
   $response = new Result();
   $response->resultado = 'OK';
-  $response->mensaje = 'SE REGISTRO EXITOSAMENTE EL CLIENTE';
+  $response->mensaje = 'SE REGISTRO EXITOSAMENTE EL ADMINISTRADOR';
 
   header('Content-Type: application/json');
 

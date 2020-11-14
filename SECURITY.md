@@ -12,6 +12,17 @@ aqui podrá generar errores, se recomienda solo usar las siguientes
 | 7.3.23  | :white_check_mark: |
 | < 7.x.x | :x:                |
 
+
+## Versiones soportadas de node
+
+En el siguiente cuadro se encuentran las versiones soportadas de node, cualquier version diferente a las que se encuentren
+aqui podrá generar errores, se recomienda solo usar las siguientes
+
+| Version | Soportada          |
+| ------- | ------------------ |
+| 12.x.x  | :white_check_mark: |
+| < 12.x.x | :x:                |
+
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.

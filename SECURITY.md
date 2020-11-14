@@ -1,16 +1,27 @@
 # Security Policy
 
-## Supported Versions
+## Versiones soportadas de php
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+En el siguiente cuadro se encuentran las versiones soportadas de php, cualquier version diferente a las que se encuentren
+aqui podrá generar errores, se recomienda solo usar las siguientes
 
-| Version | Supported          |
+| Version | Soportada          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 7.2.34  | :white_check_mark: |
+| 7.3.23  | :white_check_mark: |
+| 7.3.23  | :white_check_mark: |
+| < 7.x.x | :x:                |
+
+
+## Versiones soportadas de node
+
+En el siguiente cuadro se encuentran las versiones soportadas de node, cualquier version diferente a las que se encuentren
+aqui podrá generar errores, se recomienda solo usar las siguientes
+
+| Version | Soportada          |
+| ------- | ------------------ |
+| 12.x.x  | :white_check_mark: |
+| < 12.x.x | :x:                |
 
 ## Reporting a Vulnerability
 

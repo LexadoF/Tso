@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-11-2020 a las 22:40:37
+-- Tiempo de generación: 15-11-2020 a las 20:58:07
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -195,7 +195,8 @@ CREATE TABLE `vendedor` (
 --
 ALTER TABLE `administrador`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `documento` (`documento`);
+  ADD UNIQUE KEY `documento` (`documento`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- Indices de la tabla `categoria`
@@ -216,7 +217,8 @@ ALTER TABLE `chat`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `documento` (`documento`);
+  ADD UNIQUE KEY `documento` (`documento`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- Indices de la tabla `comentario_noticia`

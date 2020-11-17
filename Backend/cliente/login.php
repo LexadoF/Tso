@@ -1,5 +1,5 @@
 <?php 
-require_once 'conexion.php'; // IMPORTA EL ARCHIVO CON LA CONEXION A LA DB
+require("../conexion/conexion.php"); // IMPORTA EL ARCHIVO CON LA CONEXION A LA DB
   header('Access-Control-Allow-Origin: *'); 
   header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
   
@@ -12,10 +12,10 @@ require_once 'conexion.php'; // IMPORTA EL ARCHIVO CON LA CONEXION A LA DB
   $conexion = conexion(); // CREA LA CONEXION
   
   // REALIZA LA QUERY A LA BASE DE DATOS
-  $resultado = mysqli_query($conexion, "SELECT * FROM usuarios WHERE usuario='$params-> usuario' AND contrasena='$params-> contrasena'");
+  $resultado = mysqli_query($conexion, "SELECT * FROM cliente WHERE correo='$params-> correo' AND contrasena='$params-> contrasena'");
  
     class Result {}
-    $sql = "SELECT * FROM usuarios $where";
+    $sql = "SELECT * FROM cliente $where";
 	$resultado = $mysqli->query($sql);
     
     // GENERA LOS DATOS DE RESPUESTA

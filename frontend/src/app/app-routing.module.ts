@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // Componentes para Rutear:
-// import { LoginComponent } from './components/login/login.component';
-// import { AboutUsComponent } from './components/about-us/about-us.component';
-// import { ContactComponent } from './components/contact/contact.component';
-// import { BlogComponent } from './components/blog/blog.component';
-// import { ProductsComponent } from './components/products/products.component';
-// import { RegisterComponent } from './components/register/register.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { LoginComponent } from './components/login/login.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { ProductosComponent } from './components/productos/productos.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 
 const routes: Routes = [
-  // {path: 'login', component: LoginComponent},
-  // {path: 'register', component: RegisterComponent},
-  // {path: 'about', component: AboutUsComponent},
-  // {path: 'contact', component: ContactComponent},
-  // {path: 'blog', component: BlogComponent},
-  // {path: 'product', component: ProductsComponent}
+  {path: 'inicio', component: InicioComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'registrarse', component: RegistrarseComponent},
+  {path: 'nosotros', component: NosotrosComponent},
+  {path: 'contacto', component: ContactoComponent},
+  {path: 'productos', component: ProductosComponent},
+  {path: '**', pathMatch: 'full', redirectTo: 'inicio'}   
 ];
 
 @NgModule({

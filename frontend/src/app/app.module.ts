@@ -11,6 +11,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ContactoComponent,
     ProductosComponent,
     InicioComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,

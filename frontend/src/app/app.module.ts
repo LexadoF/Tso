@@ -12,6 +12,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
     ProductosComponent,
     InicioComponent,
     NavbarComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,

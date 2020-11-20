@@ -12,6 +12,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+
 @NgModule({
   declarations: [
     AppComponent,

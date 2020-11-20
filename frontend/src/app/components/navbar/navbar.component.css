@@ -80,6 +80,7 @@ li.youtube a span {
 a.btn {
     position: relative;
     left: 50%;
+    margin-right: 5px;
 }
 
 a.btn2 {

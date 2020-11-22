@@ -25,41 +25,38 @@ export class NavbarComponent implements OnInit {
   constructor(private registrocService: RegistrocService, private formBuilder: FormBuilder,
               private http: HttpClient) { }
 
-  onClick1(){ // funcion de javascript fichero validacion.js
+  // onClick1(){ // funcion de javascript fichero validacion.js
 
-   // alert("Welcome to custome js");
-     funcion1();
+  //  // alert("Welcome to custome js");
+  //   funcion1();
+  // }
 
-  }
+  // onClick2(){ // funcion de javascript fichero validacion.js
 
-  onClick2(){ // funcion de javascript fichero validacion.js
+  //   // alert("Welcome to custome js");
+  //     funcion2();
 
-    // alert("Welcome to custome js");
-      funcion2();
+  //  }
 
-   }
+  // onClick3(){ // funcion de javascript fichero validacion.js
 
-  onClick3(){ // funcion de javascript fichero validacion.js
+  //   // alert("Welcome to custome js");
+  //     funcion3();
 
-    // alert("Welcome to custome js");
-      funcion3();
-
-   }
+  //  }
 
 
   ngOnInit() {
+    this.registro = this.formBuilder.group({
+        documento: ['', Validators.required],
+        nombres: ['', Validators.required],
+        telefono: ['', Validators.required],
+        direccion: ['', Validators.required],
+        correo: ['', Validators.required],
+        clave: ['', Validators.required]
 
-  this.registro = this.formBuilder.group({
-      documento: ['', Validators.required],
-      nombres: ['', Validators.required],
-      telefono: ['', Validators.required],
-      direccion: ['', Validators.required],
-      correo: ['', Validators.required],
-      clave: ['', Validators.required]
-
-  });
-
-}
+    });
+  }
 
 
       /*Directiva de Angular que agrega una

@@ -10,6 +10,7 @@ import { AppRoutingModule} from './app-routing.module';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ProductosComponent } from './components/productos/productos.component';
+// import { InicioComponent } from './components/inicio/inicio.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';

@@ -49,17 +49,13 @@ li.instagram a span {
 
 .submenu {
     background: black;
-    /* margin-left: 20px; */
-    /* position: absolute; */
-    padding: 0 1cm;
+    padding: 0 50px;
 }
 
-
-/* .submenu nav {
-    background: red;
+.submenu nav {
     padding: 10px 20px;
     display: inline-block;
-} */
+}
 
 .info {
     position: relative;
@@ -68,17 +64,14 @@ li.instagram a span {
 }
 
 a.btn {
-    position: right;
-    /* align: right; */
-    /* left: 50%; */
-    /* right: 100%; */
+    position: relative;
+    left: 50%;
     margin-right: 5px;
 }
 
 a.btn2 {
-    position: center;
-    /* left: 50%; */
-    margin-left: 5px;
+    position: relative;
+    left: 50%;
 }
 
 

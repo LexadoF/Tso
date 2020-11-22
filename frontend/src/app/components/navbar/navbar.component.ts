@@ -9,19 +9,15 @@ import { RegistroService } from '../../services/cliente/registro.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  title = 'Hola en Angular';
   registro: FormGroup;
   submitted = false;
-  titulo = 'Crear un Formulario con Angular 9 y Bootstrap 4 + Validación';
-  Autor = 'Autor: Ingeniero Johann Latorre';
-
   constructor(private registroService: RegistroService, private formBuilder: FormBuilder,
               private http: HttpClient) { }
 
   ngOnInit() {
     this.registro = this.formBuilder.group({
-        documento: ['', Validators.required],
-        nombres: ['', Validators.required],
+        cc: ['', Validators.required],
+        nombre: ['', Validators.required],
         telefono: ['', Validators.required],
         direccion: ['', Validators.required],
         correo: ['', Validators.required],

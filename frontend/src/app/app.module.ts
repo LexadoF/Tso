@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -13,6 +14,10 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ChatComponent } from './components/chat/chat.component';
+
+// servicios
+import { RegistrocService } from './services/registroc.service';
+
 
 @NgModule({
   declarations: [
@@ -28,9 +33,12 @@ import { ChatComponent } from './components/chat/chat.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    RegistrocService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

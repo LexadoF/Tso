@@ -13,7 +13,6 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
-import { ChatComponent } from './components/chat/chat.component';
 
 // servicios
 import { RegistrocService } from './services/registroc.service';
@@ -28,8 +27,7 @@ import { RegistrocService } from './services/registroc.service';
     ProductosComponent,
     InicioComponent,
     NavbarComponent,
-    NoticiasComponent,
-    ChatComponent
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,

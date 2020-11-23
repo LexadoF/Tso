@@ -55,12 +55,15 @@ li.instagram a span {
 .submenu nav {
     padding: 10px 20px;
     display: inline-block;
+    /* color: red;
+    background: red; */
 }
 
 .info {
     position: relative;
     left: 50%;
     transform: translatex(-50%);
+    /* background: red; */
 }
 
 a.btn {
@@ -72,6 +75,7 @@ a.btn {
 a.btn2 {
     position: relative;
     left: 50%;
+    /* color: red; */
 }
 
 

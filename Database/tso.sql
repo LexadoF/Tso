@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2020 a las 20:58:07
+-- Tiempo de generación: 23-11-2020 a las 02:09:01
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -45,19 +45,6 @@ CREATE TABLE `administrador` (
 CREATE TABLE `categoria` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `chat`
---
-
-CREATE TABLE `chat` (
-  `id` int(11) NOT NULL,
-  `solicitud` varchar(500) NOT NULL,
-  `id_cliente` int(11) NOT NULL,
-  `id_vendedor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -160,6 +147,20 @@ CREATE TABLE `noticia` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `pqrs`
+--
+
+CREATE TABLE `pqrs` (
+  `id` int(11) NOT NULL,
+  `solicitud` varchar(500) NOT NULL,
+  `Estado` tinyint(1) NOT NULL DEFAULT 0,
+  `id_cliente` int(11) NOT NULL,
+  `id_vendedor` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `producto`
 --
 
@@ -203,14 +204,6 @@ ALTER TABLE `administrador`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `chat`
---
-ALTER TABLE `chat`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_chatCliente` (`id_cliente`),
-  ADD KEY `fk_chatVendedor` (`id_vendedor`);
 
 --
 -- Indices de la tabla `cliente`
@@ -267,6 +260,14 @@ ALTER TABLE `noticia`
   ADD KEY `fk_noticiaComentario` (`id_comentario`);
 
 --
+-- Indices de la tabla `pqrs`
+--
+ALTER TABLE `pqrs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_pqrsCliente` (`id_cliente`),
+  ADD KEY `fk_pqrsVendedor` (`id_vendedor`);
+
+--
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -294,12 +295,6 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `chat`
---
-ALTER TABLE `chat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -345,6 +340,12 @@ ALTER TABLE `noticia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `pqrs`
+--
+ALTER TABLE `pqrs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -359,13 +360,6 @@ ALTER TABLE `vendedor`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `chat`
---
-ALTER TABLE `chat`
-  ADD CONSTRAINT `fk_chatCliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
-  ADD CONSTRAINT `fk_chatVendedor` FOREIGN KEY (`id_vendedor`) REFERENCES `vendedor` (`id`);
 
 --
 -- Filtros para la tabla `comentario_noticia`
@@ -406,6 +400,13 @@ ALTER TABLE `gestionar_vendedor`
 ALTER TABLE `noticia`
   ADD CONSTRAINT `fk_noticiaComentario` FOREIGN KEY (`id_comentario`) REFERENCES `comentario_noticia` (`id`),
   ADD CONSTRAINT `fk_noticiaVendedor` FOREIGN KEY (`id_vendedor`) REFERENCES `vendedor` (`id`);
+
+--
+-- Filtros para la tabla `pqrs`
+--
+ALTER TABLE `pqrs`
+  ADD CONSTRAINT `fk_pqrsCliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id`),
+  ADD CONSTRAINT `fk_pqrsVendedor` FOREIGN KEY (`id_vendedor`) REFERENCES `vendedor` (`id`);
 
 --
 -- Filtros para la tabla `producto`

@@ -98,9 +98,9 @@
                     <form [formGroup]="registro" (ngSubmit)="onSubmit()">
                         <div class="form-group">
                             <label>Numero de Documento</label>
-                            <input type="text" formControlName="cc" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cc.errors }" />
-                            <div *ngIf="submitted && f.cc.errors" class="invalid-feedback">
-                                <div *ngIf="f.cc.errors.required">Por favor, ingresa tus Numero de Documento</div>
+                            <input type="text" formControlName="documento" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.documento.errors }" />
+                            <div *ngIf="submitted && f.documento.errors" class="invalid-feedback">
+                                <div *ngIf="f.documento.errors.required">Por favor, ingresa tus Numero de Documento</div>
                             </div>
                         </div>
 
@@ -139,9 +139,9 @@
 
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="password" formControlName="clave" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.clave.errors }" />
-                            <div *ngIf="submitted && f.clave.errors" class="invalid-feedback">
-                                <div *ngIf="f.clave.errors.required">Por favor, ingresa una Contraseña ( 6 Caracteres mínimo )</div>
+                            <input type="password" formControlName="contrasena" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
+                            <div *ngIf="submitted && f.contrasena.errors" class="invalid-feedback">
+                                <div *ngIf="f.contrasena.errors.required">Por favor, ingresa una Contraseña ( 6 Caracteres mínimo )</div>
                             </div>
                         </div>
 

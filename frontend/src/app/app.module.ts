@@ -17,6 +17,7 @@ import { RegistroService } from '../app/services/cliente/registro.service';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactoComponent,
     NosotrosComponent,
     NoticiaComponent,
-    ProductosComponent
+    ProductosComponent,
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,

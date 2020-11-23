@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RegistroService {
 
-  URL = 'http://localhost/Backend/cliente';
+  URL = 'http://localhost/Backend/cliente/';
 
 
   constructor(private http: HttpClient) { }

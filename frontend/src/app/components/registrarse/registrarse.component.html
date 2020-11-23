@@ -1,0 +1,74 @@
+<!-- Formulario de registro -->
+<a href="#modeloregistrarse" role="button" class="btn btn-outline-success" data-toggle="modal">Regístrate</a>
+<div id="modeloregistrarse" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" align="center">Registrate</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div align="center">
+                <div class="modal-body">
+                    <form [formGroup]="registro" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Numero de Documento</label>
+                            <input type="text" formControlName="cc" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.cc.errors }" />
+                            <div *ngIf="submitted && f.cc.errors" class="invalid-feedback">
+                                <div *ngIf="f.cc.errors.required">Por favor, ingresa tus Numero de Documento</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombres y Apellidos</label>
+                            <input type="text" formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }" />
+                            <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                                <div *ngIf="f.nombre.errors.required">Por favor, ingresa tus Nombres y Apellidos</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input type="text" formControlName="telefono" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }" />
+                            <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
+                                <div *ngIf="f.telefono.errors.required">Por favor, ingresa tu numero de telefono</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <input type="text" formControlName="direccion" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.direccion.errors }" />
+                            <div *ngIf="submitted && f.direccion.errors" class="invalid-feedback">
+                                <div *ngIf="f.direccion.errors.required">Por favor, ingresa tu Direccion</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <input type="text" formControlName="correo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" />
+                            <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                                <div *ngIf="f.correo.errors.required">El Correo es obligatorio</div>
+                                <div *ngIf="f.correo.errors.email">Por favor, ingresa tu Correo</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Contraseña</label>
+                            <input type="password" formControlName="clave" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.clave.errors }" />
+                            <div *ngIf="submitted && f.clave.errors" class="invalid-feedback">
+                                <div *ngIf="f.clave.errors.required">Por favor, ingresa una Contraseña ( 6 Caracteres mínimo )</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-outline-success">Aceptar</button>
+                        </div>
+
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,11 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { RegistroService } from '../../services/cliente/registro.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-registrarse',
+  templateUrl: './registrarse.component.html',
+  styleUrls: ['./registrarse.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class RegistrarseComponent implements OnInit {
+
   registro: FormGroup;
   submitted = false;
   constructor(private registroService: RegistroService, private formBuilder: FormBuilder,
@@ -16,12 +17,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.registro = this.formBuilder.group({
-      documento: ['', Validators.required],
+        cc: ['', Validators.required],
         nombre: ['', Validators.required],
         telefono: ['', Validators.required],
         direccion: ['', Validators.required],
         correo: ['', [Validators.required, Validators.email]],
-        contrasena: ['', [Validators.required, Validators.minLength(6)]]
+        clave: ['', Validators.required]
 
     });
   }
@@ -54,7 +55,7 @@ export class NavbarComponent implements OnInit {
   InsercionDatos() {
     this.registroService.InsercionDatos(this.registro.value).subscribe(
       datos => {
-        if (datos['resultado'] == 'OK') {
+        if (datos['resultado'] === 'OK') {
           alert(datos['mensaje']);
 
         }

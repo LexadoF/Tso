@@ -2,15 +2,8 @@
 
 .social {
     position: absolute;
-    left: 80%;
+    left: 50%;
     transform: translatex(-50%);
-    padding: 10;
-}
-
-.social li:first-child,
-ol li:first-child {
-    margin-top: 0px;
-    margin-left: 10;
 }
 
 .social li {
@@ -18,30 +11,19 @@ ol li:first-child {
     margin-right: 8px;
 }
 
-.social li a span:hover {
+.social li a i:hover {
     opacity: 0.5;
 }
 
-li.facebook a span {
-    height: 25px;
-    width: 25px;
-    display: block;
-    background: url(/src/assets/img/img-sprite.png)no-repeat -256px -276px;
-    /* ../assets/img/img-sprite.png */
+
+/*tamaños de iconos..*/
+
+li.facebook a i {
+    font-size: 20px;
 }
 
-li.twitter a span {
-    height: 25px;
-    width: 25px;
-    display: block;
-    background: url(/src/assets/img/img-sprite.png)no-repeat -298px -276px;
-}
-
-li.instagram a span {
-    height: 25px;
-    width: 25px;
-    display: block;
-    background: url(/src/assets/img/img-sprite.png)no-repeat -346px -276px;
+li.instagram a i {
+    font-size: 20px;
 }
 
 
@@ -130,6 +112,9 @@ a.btn2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*colocar para quitar puntos del menu y la fuente negrilla*/
+    list-style: none;
+    font-weight: 700;
 }
 
 .wrapper .bottom_nav ul li a {

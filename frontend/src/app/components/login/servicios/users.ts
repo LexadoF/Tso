@@ -4,7 +4,7 @@ export class Users {
     public correo: string;
     public contrasena: string;
     
-    constructor(id: number, nombre: string, 
+    constructor(id: number, nombre: string,
                 correo: string, contrasena: string){
                     this.id = id;
                     this.nombre = nombre;

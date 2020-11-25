@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-11-2020 a las 02:09:01
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.6
+-- Tiempo de generación: 25-11-2020 a las 21:48:13
+-- Versión del servidor: 10.4.16-MariaDB
+-- Versión de PHP: 7.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,8 +32,10 @@ CREATE TABLE `administrador` (
   `documento` varchar(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `telefono` varchar(10) NOT NULL,
+  `direccion` varchar(50) DEFAULT NULL,
   `correo` varchar(50) NOT NULL,
-  `contrasena` varchar(50) NOT NULL
+  `contrasena` varchar(50) NOT NULL,
+  `id_rol` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -60,7 +62,8 @@ CREATE TABLE `cliente` (
   `telefono` varchar(10) NOT NULL,
   `direccion` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `contrasena` varchar(50) NOT NULL
+  `contrasena` varchar(50) NOT NULL,
+  `id_rol` int(11) NOT NULL DEFAULT 3
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -175,6 +178,26 @@ CREATE TABLE `producto` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `nombreRol` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `nombreRol`) VALUES
+(1, 'Administrador'),
+(3, 'Cliente'),
+(2, 'Vendedor');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `vendedor`
 --
 
@@ -183,8 +206,10 @@ CREATE TABLE `vendedor` (
   `documento` varchar(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `telefono` varchar(10) NOT NULL,
+  `direccion` varchar(50) DEFAULT NULL,
   `correo` varchar(50) NOT NULL,
-  `contrasena` varchar(50) NOT NULL
+  `contrasena` varchar(50) NOT NULL,
+  `id_rol` int(11) NOT NULL DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -197,7 +222,8 @@ CREATE TABLE `vendedor` (
 ALTER TABLE `administrador`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `documento` (`documento`),
-  ADD UNIQUE KEY `correo` (`correo`);
+  ADD UNIQUE KEY `correo` (`correo`),
+  ADD KEY `idRolAdm` (`id_rol`);
 
 --
 -- Indices de la tabla `categoria`
@@ -211,7 +237,8 @@ ALTER TABLE `categoria`
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `documento` (`documento`),
-  ADD UNIQUE KEY `correo` (`correo`);
+  ADD UNIQUE KEY `correo` (`correo`),
+  ADD KEY `idRolClie` (`id_rol`);
 
 --
 -- Indices de la tabla `comentario_noticia`
@@ -275,11 +302,20 @@ ALTER TABLE `producto`
   ADD KEY `fk_idProdCat` (`id_categoria`);
 
 --
+-- Indices de la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nombreRolUnico` (`nombreRol`);
+
+--
 -- Indices de la tabla `vendedor`
 --
 ALTER TABLE `vendedor`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `documentounico` (`documento`);
+  ADD UNIQUE KEY `documentounico` (`documento`),
+  ADD UNIQUE KEY `correo` (`correo`),
+  ADD KEY `idRolVend` (`id_rol`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -362,6 +398,18 @@ ALTER TABLE `vendedor`
 --
 
 --
+-- Filtros para la tabla `administrador`
+--
+ALTER TABLE `administrador`
+  ADD CONSTRAINT `idRolAdm` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id`);
+
+--
+-- Filtros para la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  ADD CONSTRAINT `idRolClie` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id`);
+
+--
 -- Filtros para la tabla `comentario_noticia`
 --
 ALTER TABLE `comentario_noticia`
@@ -413,6 +461,12 @@ ALTER TABLE `pqrs`
 --
 ALTER TABLE `producto`
   ADD CONSTRAINT `fk_idProdCat` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`);
+
+--
+-- Filtros para la tabla `vendedor`
+--
+ALTER TABLE `vendedor`
+  ADD CONSTRAINT `idRolVend` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

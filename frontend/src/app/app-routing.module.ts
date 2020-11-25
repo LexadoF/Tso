@@ -7,6 +7,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { NoticiaComponent } from './components/noticia/noticia.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+import { AuthguardGuard } from './components/login/servicios/authguard.guard';
 
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent },
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path: 'registro', component: RegistrarseComponent },
   {path: 'nosotros', component: NosotrosComponent },
   {path: 'contacto', component: ContactoComponent },
-  {path: 'noticia', component: NoticiaComponent  },
+  {path: 'noticia', component: NoticiaComponent, canActivate: [AuthguardGuard]  },
   {path: 'productos', component: ProductosComponent },
   {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 

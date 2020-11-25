@@ -20,7 +20,7 @@ export class ApiService {
     public userlogin(correo, contrasena) {
         return this.httpClient.post<any>(this.baseUrl + 'login.php', { correo, contrasena })
         .pipe(map(Users => {
-            this.setToken(Users[0].name);
+            this.setToken(Users[0].nombre);
             this.getLoggedInName.emit(true);
             return Users;
         }));

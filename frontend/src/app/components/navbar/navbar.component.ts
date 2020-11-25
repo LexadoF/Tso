@@ -81,7 +81,7 @@ export class NavbarComponent implements OnInit {
   InsercionDatos() {
     this.registroService.InsercionDatos(this.registro.value).subscribe(
       datos => {
-        if (datos['resultado'] == 'OK') {
+        if (datos['resultado'] === 'OK') {
           alert(datos['mensaje']);
 
         }

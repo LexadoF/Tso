@@ -5,12 +5,16 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { NoticiaComponent } from './components/noticia/noticia.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent },
+  {path: 'login', component: LoginComponent },
+  {path: 'registro', component: RegistrarseComponent },
   {path: 'nosotros', component: NosotrosComponent },
   {path: 'contacto', component: ContactoComponent },
-  {path: 'noticia', component: NoticiaComponent },
+  {path: 'noticia', component: NoticiaComponent  },
   {path: 'productos', component: ProductosComponent },
   {path: '**', pathMatch: 'full', redirectTo: 'inicio'}
 

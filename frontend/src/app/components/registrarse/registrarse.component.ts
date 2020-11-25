@@ -17,12 +17,12 @@ export class RegistrarseComponent implements OnInit {
 
   ngOnInit() {
     this.registro = this.formBuilder.group({
-        cc: ['', Validators.required],
+        documento: ['', Validators.required],
         nombre: ['', Validators.required],
         telefono: ['', Validators.required],
         direccion: ['', Validators.required],
         correo: ['', [Validators.required, Validators.email]],
-        clave: ['', Validators.required]
+        contrasena: ['', Validators.required]
 
     });
   }

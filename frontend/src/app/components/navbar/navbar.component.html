@@ -9,7 +9,7 @@
         <div class="social">
             <!--navbar del redes sociales-->
             <ul>
-            <!--coloque i para iconos-->
+                <!--coloque i para iconos-->
                 <li class="facebook"><a href="https://www.facebook.com/joseleoneljimenezbaena"><i class="fab fa-facebook"></i></a></li>
                 <li class="instagram"><a href="https://www.instagram.com/zenemij98/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
             </ul>
@@ -24,8 +24,8 @@
                         <a href="#">Correo: correo@tso.com</a>
                         <a href="#">Tel: 4829560</a>
                         <a href="#">Dir: Cl 12#45-32</a>
-                        <a href="#modeloiniciarsesion" role="button" class="btn btn-outline-success" data-toggle="modal">Iniciar Sesion</a>
-                        <a href="#modeloregistrarse" role="button" class="btn btn-outline-success" data-toggle="modal">Regístrate</a>
+                        <!-- <a href="#modeloiniciarsesion" role="button" class="btn btn-outline-success" data-toggle="modal">Iniciar Sesion</a> -->
+                        <!-- <a href="#modeloregistrarse" role="button" class="btn btn-outline-success" data-toggle="modal">Regístrate</a> -->
                     </nav>
                 </div>
             </div>
@@ -39,6 +39,9 @@
             <li><a href="/contacto">Contacto</a></li>
             <li><a href="/noticias">Noticias</a></li>
             <li><a href="/productos">Productos</a></li>
+            <app-login></app-login>
+            <app-registrarse></app-registrarse>
+            <button type="button" class="nav-link" *ngIf="logoutbtn" (click)="logout()"></button>
         </ul>
     </div>
 </div>
@@ -49,125 +52,6 @@
             <input type="text" class="input" placeholder="Buscar Productos">
             <div class="btn btn_common">
                 <i class="fas fa-search"></i>
-            </div>
-        </div>
-    </div>
-</div>
-<!--Formulario de login-->
-<div id="modeloiniciarsesion" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Iniciar Sesion</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div align="center">
-                <div class="modal-body">
-
-                    <form autocomplete="off">
-                        <div class="form-group">
-                            <label>Correo</label>
-                            <input type="text" formControlName="correo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" />
-                            <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
-                                <div *ngIf="f.correo.errors.required">El Correo es obligatorio</div>
-                                <div *ngIf="f.correo.errors.email">Por favor, ingresa tu Correo</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Contraseña</label>
-                            <input type="password" formControlName="contrasena" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
-                            <div *ngIf="submitted && f.contrasena.errors" class="invalid-feedback">
-                                <div *ngIf="f.contrasena.errors.required">Por favor, ingresa una Contraseña Valida</div>
-                                <!-- <div *ngIf="f.contrasena.errors.required">Por favor, ingresa una Contraseña ( 6 Caracteres mínimo )</div> -->
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-outline-success">Aceptar</button>
-                        </div>
-                    </form>
-
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--Formulario de registro-->
-<div id="modeloregistrarse" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" align="center">Registrate</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div align="center">
-                <div class="modal-body">
-                    <form [formGroup]="registro" (ngSubmit)="onSubmit()">
-                        <div class="form-group">
-                            <label>Numero de Documento</label>
-                            <input type="text" formControlName="documento" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.documento.errors }" />
-                            <div *ngIf="submitted && f.documento.errors" class="invalid-feedback">
-                                <div *ngIf="f.documento.errors.required">Por favor, ingresa tus Numero de Documento</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Nombres y Apellidos</label>
-                            <input type="text" formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }" />
-                            <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
-                                <div *ngIf="f.nombre.errors.required">Por favor, ingresa tus Nombres y Apellidos</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Telefono</label>
-                            <input type="text" formControlName="telefono" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }" />
-                            <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
-                                <div *ngIf="f.telefono.errors.required">Por favor, ingresa tu numero de telefono</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Direccion</label>
-                            <input type="text" formControlName="direccion" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.direccion.errors }" />
-                            <div *ngIf="submitted && f.direccion.errors" class="invalid-feedback">
-                                <div *ngIf="f.direccion.errors.required">Por favor, ingresa tu Direccion</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Correo</label>
-                            <input type="text" formControlName="correo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" />
-                            <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
-                                <div *ngIf="f.correo.errors.required">El Correo es obligatorio</div>
-                                <div *ngIf="f.correo.errors.email">Por favor, ingresa tu Correo</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Contraseña</label>
-                            <input type="password" formControlName="contrasena" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contrasena.errors }" />
-                            <div *ngIf="submitted && f.contrasena.errors" class="invalid-feedback">
-                                <div *ngIf="f.contrasena.errors.required">Por favor, ingresa una Contraseña Valida</div>
-                                <!-- <div *ngIf="f.contrasena.errors.required">Por favor, ingresa una Contraseña ( 6 Caracteres mínimo )</div> -->
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <button class="btn btn-outline-success">Aceptar</button>
-                        </div>
-
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

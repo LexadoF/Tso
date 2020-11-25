@@ -2,17 +2,44 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RegistroService } from '../../services/cliente/registro.service';
+import { ApiService } from '../login/servicios/serviciologin'; // activar al crear servicio login
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
   registro: FormGroup;
   submitted = false;
+  loginbtn: boolean;
+  logoutbtn: boolean;
+
   constructor(private registroService: RegistroService, private formBuilder: FormBuilder,
-              private http: HttpClient) { }
+              private http: HttpClient, private dataService: ApiService) {
+  dataService.getLoggedInName.subscribe(name => this.changeName(name));
+  if(this.dataService.isLoggedIn())
+  {
+    console.log('loggedin');
+    this.loginbtn = false;
+    this.logoutbtn = true;
+  }
+  else{
+    this.loginbtn = true;
+    this.logoutbtn = false;
+  }
+  }
+  
+  private changeName(name: boolean): void {
+    this.logoutbtn = name;
+    this.loginbtn = !name;
+  }
+  logout()
+  {
+    this.dataService.deleteToken();
+    window.location.href = '/inicio';
+  }
 
   ngOnInit() {
     this.registro = this.formBuilder.group({

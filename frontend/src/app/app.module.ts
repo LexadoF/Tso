@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,13 +13,16 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { NoticiaComponent } from './components/noticia/noticia.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 // Servicios
 import { RegistroService } from '../app/services/cliente/registro.service';
+import { ApiService } from '../app/components/login/servicios/serviciologin';
 
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { RegistrarseComponent } from './components/registrarse/registrarse.component';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +34,9 @@ import { RegistrarseComponent } from './components/registrarse/registrarse.compo
     NosotrosComponent,
     NoticiaComponent,
     ProductosComponent,
-    RegistrarseComponent
+    RegistrarseComponent,
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { RegistrarseComponent } from './components/registrarse/registrarse.compo
     ReactiveFormsModule
   ],
   providers: [
-    RegistroService
+    RegistroService,
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

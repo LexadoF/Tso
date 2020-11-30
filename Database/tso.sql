@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2020 a las 21:48:13
--- Versión del servidor: 10.4.16-MariaDB
--- Versión de PHP: 7.4.12
+-- Tiempo de generación: 30-11-2020 a las 05:47:09
+-- Versión del servidor: 10.4.11-MariaDB
+-- Versión de PHP: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -170,6 +170,7 @@ CREATE TABLE `pqrs` (
 CREATE TABLE `producto` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
+  `descripcion` varchar(50) NOT NULL,
   `stock` int(11) NOT NULL,
   `precio` float NOT NULL,
   `id_categoria` int(11) NOT NULL

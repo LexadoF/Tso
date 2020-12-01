@@ -8,18 +8,30 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
-import { AuthguardGuard } from './authguard.guard';
+import { AuthguardGuard } from './loginadmin/servicios/authguard.guard';
+import { GclienteComponent } from './gcliente/gcliente.component';
+import { GproductosComponent } from './gproductos/gproductos.component';
+import { GvendedorComponent } from './gvendedor/gvendedor.component';
+import { LoginvComponent } from './loginv/loginv.component';
+import { LogincComponent } from './loginc/loginc.component';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
 
 const routes: Routes = [
 // { path: 'login', component: LoginComponent },
+// { path: 'registration', component: RegisterComponent },
+// { path: 'login', component: LoginadminComponent },
+{ path: 'loginv', component: LoginvComponent },
+{ path: 'loginc', component: LogincComponent },
 { path: 'home', component: HomeComponent },
 { path: 'productos', component: ProductosComponent },
 { path: 'noticias', component: NoticiasComponent },
 { path: 'contacto', component: ContactoComponent },
 { path: 'nosotros', component: NosotrosComponent },
-{ path: 'registration', component: RegisterComponent },
+{ path: 'gcliente', component: GclienteComponent },
+{ path: 'gproductos', component: GproductosComponent },
+{ path: 'gvendedor', component: GvendedorComponent },
 { path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
-// {path: '**', pathMatch: 'full', redirectTo: 'home'}
+{path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({

@@ -15,6 +15,12 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ChatComponent } from './chat/chat.component';
 import { FooterComponent } from './footer/footer.component';
+import { GclienteComponent } from './gcliente/gcliente.component';
+import { GvendedorComponent } from './gvendedor/gvendedor.component';
+import { GproductosComponent } from './gproductos/gproductos.component';
+import { LogincComponent } from './loginc/loginc.component';
+import { LoginvComponent } from './loginv/loginv.component';
+import { LoginadminComponent } from './loginadmin/loginadmin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { FooterComponent } from './footer/footer.component';
     NosotrosComponent,
     ContactoComponent,
     ChatComponent,
-    FooterComponent
+    FooterComponent,
+    GclienteComponent,
+    GvendedorComponent,
+    GproductosComponent,
+    LogincComponent,
+    LoginvComponent,
+    LoginadminComponent
   ],
   imports: [
     BrowserModule,

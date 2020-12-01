@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="" routerLinkActive="active">Angular</a>
+    <a class="navbar-brand" routerLink="" routerLinkActive="active">Tso</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
 
 <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+                <a class="nav-link" routerLink="home" routerLinkActive="active">Inicio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="nosotros" routerLinkActive="active">Nosotros</a>
@@ -24,7 +24,22 @@
                 <a class="nav-link" routerLink="productos" routerLinkActive="active">Productos</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" *ngIf="logoutbtn" routerLink="gproductos" routerLinkActive="active">Gestion Productos</a>
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link" *ngIf="logoutbtn" routerLink="dashboard" routerLinkActive="active">Gestion</a>
+            </li> -->
+            <li class="nav-item dropdown" *ngIf="logoutbtn">
+                <a class="nav-link dropdown-toggle" routerLink="dashboard" routerLinkActive="active" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Gestion
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="gproductos" routerLinkActive="active">Productos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="gcliente" routerLinkActive="active">Clientes</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" routerLink="gvendedor" routerLinkActive="active">Vendedores</a>
+                </div>
             </li>
         </ul>
         <ul class="navbar-nav mr-auto" *ngIf="loginbtn">
@@ -37,6 +52,7 @@
         </ul>
         <ul class="navbar-nav mr-auto">
             <button type="button" *ngIf="logoutbtn" class="btn btn-outline-danger" (click)="logout()">Cerrar Sesion</button>
+            <!-- <button type="button" *ngIf="logouta" class="btn btn-outline-danger" (click)="logoutadmin()">Cerrar Sesion</button> -->
         </ul>
 
     </div>
@@ -44,7 +60,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
 
 </nav>

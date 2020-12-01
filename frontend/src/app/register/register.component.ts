@@ -11,33 +11,51 @@ styleUrls: ['./register.component.css']
 })
 
 export class RegisterComponent implements OnInit {
+
 angForm: FormGroup;
-constructor(private fb: FormBuilder, private dataService: ApiService, private router: Router) {
+submitted = false;
 
-  this.angForm = this.fb.group({
-  email: ['', [Validators.required, Validators.minLength(1), Validators.email]],
-  password: ['', Validators.required],
-  name: ['', Validators.required],
-  mobile: ['', Validators.required]
-  });
-  }
-
+constructor(private fb: FormBuilder, private dataService: ApiService, private router: Router) {}
 ngOnInit() {
+  this.angForm = this.fb.group({
+      documento: ['', Validators.required],
+      nombre: ['', Validators.required],
+      telefono: ['', Validators.required],
+      direccion: ['', Validators.required],
+      correo: ['', [Validators.required, Validators.email]],
+      contrasena: ['', Validators.required]
+
+  });
 }
 
-postdata(angForm1) {
-this.dataService.userregistration(angForm1.value.name, angForm1.value.email, angForm1.value.password)
-.pipe(first())
-.subscribe(
-data => {
-this.router.navigate(['login']);
-},
+  get f() { return this.angForm.controls; }
 
-error => {
-});
+// tslint:disable-next-line: typedef
+onSubmit() { // funcion de formulario
+
+  this.submitted = true;
+
+  if (this.angForm.invalid) {
+      return;
+  }
+  // alert('Mensaje Enviado !'+JSON.stringify(this.contacto.value))
+//  console.log('Mensaje Enviado !'+JSON.stringify(this.contacto.value))
+
+    // tslint:disable-next-line: align
+    this.InsercionDatos();
 }
 
-get email() { return this.angForm.get('email'); }
-get password() { return this.angForm.get('password'); }
-get name() { return this.angForm.get('name'); }
+
+// tslint:disable-next-line: typedef
+InsercionDatos() {
+  this.dataService.InsercionDatos(this.angForm.value).subscribe(
+    datos => {
+      if (datos['resultado'] === 'OK') {
+        alert(datos['mensaje']);
+
+      }
+    }
+  );
+}
+
 }

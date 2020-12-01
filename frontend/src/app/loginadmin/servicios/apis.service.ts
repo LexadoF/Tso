@@ -7,33 +7,32 @@ import { Users } from './users';
 providedIn: 'root'
 })
 
-export class ApiService {
+export class ApisService {
+
 redirectUrl: string;
-baseUrl = 'http://localhost/angular_admin/php';
-URL = 'http://localhost/Backend/cliente/';
+
+baseUrl = 'http://localhost/angular_admin/php2';
 
 @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
+
 constructor(private httpClient: HttpClient) { }
 
 public userlogin(username, password) {
 alert(username);
 return this.httpClient.post<any>(this.baseUrl + '/login.php', { username, password })
-.pipe(map( Users => {
+.pipe(map(Users => {
 this.setToken(Users[0].name);
 this.getLoggedInName.emit(true);
 return Users;
 }));
 }
 
-// public userregistration(name, email, pwd) {
-// return this.httpClient.post<any>(this.baseUrl + '/register.php', { name, email, pwd })
-// .pipe(map( Users => {
-// return Users;
-// }));
-// }
-InsercionDatos(registro) {
-    return this.httpClient.post(`${this.URL}registrar.php`, JSON.stringify(registro));
-  }
+public userregistration(name,email,pwd) {
+return this.httpClient.post<any>(this.baseUrl + '/register.php', { name, email, pwd })
+.pipe(map(Users => {
+return Users;
+}));
+}
 
 // token
 setToken(token: string) {

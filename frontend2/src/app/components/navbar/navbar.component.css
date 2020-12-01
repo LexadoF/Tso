@@ -91,6 +91,23 @@ a {
     margin-top: 20px;
 }
 
+.header-part {
+    margin-top: 37px;
+}
+
+.header-part>p {
+    color: #3b3131;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.header-part span {
+    color: #da9a32;
+}
+
+
+/* navbar logo */
+
 .logo h2 {
     color: #4f4f4f;
     font-family: "Roboto", sans-serif;
@@ -102,19 +119,28 @@ a {
     text-decoration: none;
 }
 
-.nav.navbar-nav {
-    margin-top: 28px;
-    display: inline;
+.collapse {
+    margin: 0px auto;
 }
 
 .navbar-nav>li>a {
+    margin: 0px auto;
     padding-left: 24px;
     color: #665f5f;
     font-size: 21px;
     font-family: 'Roboto', sans-serif;
 }
 
-.nav.navbar-nav a:hover {
+.navbar-nav {
+    padding-left: 24px;
+    color: #665f5f;
+    font-size: 21px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+.navbar-nav>li>a:hover {
     background: #fff;
     color: #f39c12
 }
@@ -140,43 +166,15 @@ a {
     border-radius: 20px;
 }
 
-.header-part {
-    margin-top: 37px;
-}
 
-.header-part>p {
-    color: #3b3131;
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.header-part span {
-    color: #da9a32;
-}
+/* navbar logo */
 
 
-/* otro buscador */
+/* navbar buscar */
 
 .header-catagory {
-    margin-bottom: -35px;
-}
-
-.catagory {
-    margin: 22px 0 14px;
-    text-align: center;
-}
-
-.catagory span {
-    color: #6a6666;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0 20px 0 10px;
-}
-
-.catagory i {
-    font-size: 22px;
-    color: #f39c12
+    margin: 0px auto;
+    display: block;
 }
 
 .header-catagory button {
@@ -185,7 +183,8 @@ a {
     color: #fff;
     font-size: 24px;
     height: 60px;
-    margin-left: -4px;
+    /* margin-left: -4px; */
+    margin: 5px;
     padding-bottom: 4px;
     width: 55px;
 }
@@ -208,27 +207,11 @@ a {
     width: 295px;
 }
 
-.header-catagory select {
-    background: #fff none repeat scroll 0 0;
-    border-top: 2px solid #d5d5d5;
-    border-bottom: 2px solid #d5d5d5;
-    border-left: 1px solid #d5d5d5;
-    border-right: 1px solid #d5d5d5;
-    font-size: 14px;
-    height: 60px;
-    margin: 0 0 0 -5px;
-    padding: 0 30px;
-    width: 173px;
-    border-right: none;
-}
 
-.header-catagory option {
-    width: 100%;
-    text-align: center;
-    padding: 5px 0;
-    margin-top: 2px;
-    background: #c5c5c5;
-}
+/* fin buscador */
+
+
+/* navbar */
 
 .header-feahion {
     position: relative;

@@ -35,37 +35,46 @@
         </div>
     </div>
 </section>
-<div class="clear">
-</div>
-<section class="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-                    <a routerLink="inicio" routerLinkActive="active">
-                        <h2>TSO</h2>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <ul class="nav navbar-nav" style="margin:0px auto; display:block;">
-                    <li><a routerLink="inicio" routerLinkActive="active">INICIO</a></li>
-                    <li><a routerLink="nosotros" routerLinkActive="active">NOSOTROS</a></li>
-                    <li><a routerLink="contacto" routerLinkActive="active">CONTACTO</a></li>
-                    <li><a routerLink="productos" routerLinkActive="active">PRODUCTOS</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <div class="cart">
-                    <a routerLink="productos" routerLinkActive="active">
-                        <p><i class="fa fa-cart-arrow-down"></i><sup>5</sup>&#36;&nbsp;&nbsp;100.000</p>
-                    </a>
-                </div>
+<!-- navbar logo -->
+<nav class="navbar navbar-expand-lg navbar-ligth bg-ligth">
+    <section class="header">
+        <div class="logo">
+            <a routerLink="inicio" routerLinkActive="active">
+                <h2>TSO</h2>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarlogo">
+            <ul class="navbar-nav mr-auto">
+                <li><a routerLink="inicio" routerLinkActive="active">INICIO</a></li>
+                <li><a routerLink="nosotros" routerLinkActive="active">NOSOTROS</a></li>
+                <li><a routerLink="contacto" routerLinkActive="active">CONTACTO</a></li>
+                <li><a routerLink="productos" routerLinkActive="active">PRODUCTOS</a></li>
+            </ul>
+            <div class="cart">
+                <a routerLink="productos" routerLinkActive="active">
+                    <p><i class="fa fa-cart-arrow-down"></i><sup>5</sup>&#36;&nbsp;&nbsp;100.000</p>
+                </a>
             </div>
         </div>
-    </div>
-</section>
-
-
-<br><br>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarlogo" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </section>
+</nav>
+<!-- fin navbar logo -->
+<br>
 <hr>
+<!-- navbar buscar -->
+<nav class="navbar navbar-expand-lg navbar-ligth bg-ligth">
+    <section class="header-catagory">
+        <div class="container">
+            <div class="row">
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="text" placeholder="Buscar Productos">
+                    <button><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+</nav>

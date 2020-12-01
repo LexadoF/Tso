@@ -113,6 +113,7 @@
 }
 
 .catagory span {
+    margin-left: 15%;
     color: #6a6666;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -122,7 +123,8 @@
 
 .catagory i {
     font-size: 22px;
-    color: #f39c12
+    color: #f39c12;
+    align-content: center;
 }
 
 .header-catagory button {
@@ -134,6 +136,7 @@
     margin-left: -4px;
     padding-bottom: 4px;
     width: 55px;
+    text-align: center;
 }
 
 .header-catagory input[type="text"] {
@@ -146,6 +149,7 @@
     width: 328px;
     padding: 20px 0;
     height: 60px;
+    text-align: center;
 }
 
 .header-catagory input[placeholder] {
@@ -165,7 +169,8 @@
     margin: 0 0 0 -5px;
     padding: 0 30px;
     width: 173px;
-    border-right: none;
+    /* border-right: none; */
+    text-align: center;
 }
 
 .header-catagory option {

@@ -30,7 +30,7 @@ export class LoginclienteComponent implements OnInit {
       });
   }
   get f(){ return this.angForm.controls; } // funcion para mostrar los errores
-  
+
   IniciarSesion(){ // Funcion del Form Iniciar Sesion
     this.submitted = true;
     if (this.angForm.invalid){

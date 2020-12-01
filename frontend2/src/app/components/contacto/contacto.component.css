@@ -1,0 +1,99 @@
+.header-part {
+    margin-top: 37px;
+}
+
+.header-part>p {
+    color: #3b3131;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.header-part span {
+    color: #da9a32;
+}
+
+.contact-us {
+    margin: 90px 0px 110px
+}
+
+.contact-us h2 {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.get_in_touch {
+    padding-left: 70px;
+}
+
+.contact-us form p {
+    color: #383838;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    padding: 28px 0 0;
+}
+
+.contact-us form input {
+    border: 1px solid #c0c0c0;
+    height: 40px;
+    padding: 0 20px;
+    width: 100%;
+    background: #f8f8f8;
+}
+
+.contact-us form textarea {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: 1px solid #c0c0c0;
+    height: 230px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.contact-us input[type="submit"] {
+    background: #fe931f none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 31px;
+    text-transform: uppercase;
+    width: 105px;
+}
+
+.contact-us .contact_icon .icon {
+    float: left;
+}
+
+.contact-us .contact_icon .icon i {
+    background: #fe931f none repeat scroll 0 0;
+    color: #fff;
+    font-size: 28px;
+    padding: 8px 0;
+    text-align: center;
+    width: 50px;
+}
+
+.contact-us .contact_icon .c_text {
+    float: left;
+    margin-left: 13px;
+}
+
+.contact-us .contact_icon .c_text p {
+    line-height: 20px
+}
+
+.contact-us .contact_icon .c_text p {
+    line-height: 10px;
+    margin-top: 7px;
+    color: #333333;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact-us .contact_icon {
+    margin-left: -10px;
+    margin-top: 50px;
+}

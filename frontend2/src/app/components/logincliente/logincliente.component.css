@@ -1,0 +1,17 @@
+.btn {
+    margin: 5px;
+}
+
+.header-part {
+    margin-top: 37px;
+}
+
+.header-part>p {
+    color: #3b3131;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.header-part span {
+    color: #da9a32;
+}

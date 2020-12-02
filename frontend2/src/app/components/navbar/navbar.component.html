@@ -3,7 +3,12 @@
         <div class="row">
             <div class="col-md-4">
                 <ul *ngIf="logoutbtn">
-                    <li><a href="#">Account</a></li>
+                    <li>
+                        <a routerLink="perfil" routerLinkActive="active">
+                            <p><span><i class="fa fa-user-circle-o"></i></span>Perfil</p>
+                        </a>
+                    </li>
+
                     <li><a href="#">Checkout</a></li>
                     <li><a href="#">dashbord</a></li>
                 </ul>
@@ -78,3 +83,4 @@
         </div>
     </section>
 </nav>
+<br>

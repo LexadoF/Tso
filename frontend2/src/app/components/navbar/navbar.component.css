@@ -7,28 +7,6 @@ a {
     text-decoration: none !important;
 }
 
-.header-top .fa.fa-wifi {
-    -ms-transform: rotate(7deg);
-    /* IE 9 */
-    -moz-transform: rotate(7deg);
-    /* IE 9 */
-    -webkit-transform: rotate(7deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(20deg);
-    -moz-transform-origin: 20% 40%;
-}
-
-.header-top .fa.fa-wifi {
-    transform: rotate(50deg);
-    -ms-transform: rotate(50deg);
-    -moz-transform: rotate(50deg);
-    -webkit-transform: rotate(50deg);
-    transform-origin: 65% 40% 0;
-    -ms-transform-origin: 65% 40% 0;
-    -moz-transform-origin: 65% 40% 0;
-    -webkit-transform-origin: 65% 40% 0;
-}
-
 .header-top {
     background: #424242 none repeat scroll 0 0;
     height: 35px;

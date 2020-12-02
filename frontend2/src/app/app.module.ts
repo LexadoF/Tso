@@ -16,6 +16,8 @@ import { LoginclienteComponent } from './components/logincliente/logincliente.co
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { ProductoselectComponent } from './components/productoselect/productoselect.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ChatComponent } from './components/chat/chat.component';
     LoginclienteComponent,
     NoticiasComponent,
     FooterComponent,
-    ChatComponent
+    ChatComponent,
+    PerfilComponent,
+    ProductoselectComponent
   ],
   imports: [
     BrowserModule,

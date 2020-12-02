@@ -1,0 +1,391 @@
+/*single product*/
+
+.stylish-product {
+    margin-top: 115px;
+}
+
+.single-product-slider>img {
+    width: 515px;
+}
+
+.single-product-text {
+    margin-left: 38px;
+}
+
+.stylish-product .small-slider {
+    margin-top: 4px;
+}
+
+.single-product-text h1 {
+    font-size: 50px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #4c4c4c;
+}
+
+.single-product-text h2 {
+    color: #606060;
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0;
+    padding: 25px 0;
+}
+
+.single-product-text h5.love {
+    margin-top: 60px;
+}
+
+.single-product-text h6 {
+    color: #4f4f4f;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.single-product-text h3 {
+    color: #4f4f4f;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.single-product-text select {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: medium none;
+    padding: 2px 20px;
+    width: 230px;
+}
+
+.single-product-text option {
+    background: #f1f1f1 none repeat scroll 0 0;
+    margin: 2px 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #000
+}
+
+.single-product-text option:last-child {
+    border-bottom: medium none;
+}
+
+.product_description {
+    margin-top: 35px;
+}
+
+.single-product-text h4 {
+    padding-top: 30px;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #504d4d
+}
+
+.single-product-text h4 i {
+    color: #f39c12;
+    margin-right: 10px;
+}
+
+.single-product-text h5 {
+    color: #3a3a3a;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.single-product-text h5 span {
+    border: 1px solid #a29c9c;
+    font-size: 14px;
+    margin-right: 5px;
+    padding: 3px 6px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.single-product-text h5 span:first-child {
+    margin-left: 15px;
+}
+
+.single-product-text h5.tag span {
+    margin-left: 72px
+}
+
+.single-product-text p span i {
+    color: #898989;
+}
+
+.single-product-text p i {
+    color: #f39c12;
+    font-size: 22px;
+    margin: 0;
+    padding-right: 5px;
+}
+
+.single-product-text p span i {
+    color: #898989;
+}
+
+.count_c {
+    padding: 50px 0
+}
+
+.single-product-text .count {
+    float: left
+}
+
+.single-product-text p.icon i {
+    color: #f39c12;
+    font-size: 20px;
+    margin: 0;
+    padding-right: 15px;
+}
+
+.single-product-text p.icon i:hover {
+    color: #000;
+}
+
+.single-product-text .cart p {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    margin-top: -1px;
+    padding: 10px 15px;
+    float: left;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.count>p {
+    border: 1px solid #000;
+    padding: 10px 17px;
+    position: relative;
+    text-align: center;
+    width: 42px;
+}
+
+.count>p::after {
+    border: 1px solid #000;
+    content: "+";
+    padding: 2px 16px;
+    position: absolute;
+    right: -1px;
+    top: -26px;
+}
+
+.count>p::before {
+    border: 1px solid #000;
+    content: "-";
+    font-size: 19px;
+    padding: 0 17px;
+    position: absolute;
+    right: -1px;
+    top: 40px;
+}
+
+.product_description h2 {
+    border-bottom: 1px solid #d0cece;
+    padding-bottom: 11px;
+    margin: 130px 0 40px;
+}
+
+.product_description span.description {
+    background: #f39c12 none repeat scroll 0 0;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 12px;
+}
+
+.product_description span.review {
+    border-right: 1px solid #d0cece;
+    border-top: 1px solid #d0cece;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 11px 10px 12px;
+    color: #515151
+}
+
+.product_description h3 {
+    color: #515151;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 42px 0 0;
+}
+
+.product_description p {
+    color: #878181;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 33px;
+}
+
+.related-products .bar {
+    margin: 120px 0 70px;
+    text-align: center;
+}
+
+.brands .bar {
+    margin: 120px 0 70px;
+    text-align: center;
+}
+
+.latest-product .bar {
+    margin: -47px 0 70px;
+    text-align: center;
+}
+
+.best-seller {
+    margin-top: 15px;
+}
+
+.best-seller .bar {
+    margin: -47px 0 70px;
+    text-align: center;
+}
+
+.bar>h2 {
+    color: #515151;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 31px;
+    font-weight: 400;
+    margin: 127px 0 0;
+}
+
+.bar {
+    position: relative;
+}
+
+.bar::after {
+    background: #d0cece;
+    bottom: 8px;
+    content: "";
+    height: 2px;
+    left: 51%;
+    position: absolute;
+    width: 85px;
+}
+
+.bar::before {
+    background: #d0cece;
+    bottom: 8px;
+    content: "";
+    height: 2px;
+    right: 51%;
+    position: absolute;
+    width: 85px;
+}
+
+.s_product {
+    position: relative;
+}
+
+.product {
+    margin-bottom: 106px;
+}
+
+.s_product>img {
+    width: 100%;
+}
+
+.s_product h2 {
+    background: #e8eced none repeat scroll 0 0;
+    border-radius: 52%;
+    color: #eec787;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 20px 8px;
+    position: absolute;
+    right: 18px;
+    top: -13px;
+}
+
+.s_product>h3 {
+    background: #f39c12 none repeat scroll 0 0;
+    bottom: -30px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    left: 25%;
+    padding: 13px 38px;
+    position: absolute;
+    text-align: center;
+}
+
+.s_product h4 {
+    background: rgba(0, 0, 0, .5);
+    bottom: -10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding: 20px 0px;
+    font-family: "Roboto", sans-serif;
+    opacity: 0;
+}
+
+.s_product .s_overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+}
+
+.s_product i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.s_product:hover>.s_overlay {
+    opacity: 1
+}
+
+.s_product:hover>h4 {
+    opacity: 1
+}
+
+.s_product:hover>h3 {
+    opacity: 0
+}
+
+.rate>h3 {
+    margin: 0;
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    color: #3d3d3d;
+}
+
+.rate>p {
+    margin-top: 5px;
+}
+
+.rate>p i {
+    color: #f39c12;
+    margin-right: 5px;
+}
+
+.rate>p span i {
+    color: #b8b8b8;
+}
+
+.rate>h5 {
+    margin-top: -3px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    color: #3d3d3d;
+}

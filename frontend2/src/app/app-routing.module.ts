@@ -10,10 +10,14 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { AuthguardGuard } from './authguard.guard';
 import { LoginclienteComponent } from './components/logincliente/logincliente.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { ProductoselectComponent } from './components/productoselect/productoselect.component';
 
 const routes: Routes = [
 { path: 'inicio', component: InicioComponent },
+{ path: 'perfil', component: PerfilComponent },
 { path: 'productos', component: ProductosComponent },
+{ path: 'productosel', component: ProductoselectComponent },
 { path: 'noticias', component: NoticiasComponent },
 { path: 'contacto', component: ContactoComponent },
 { path: 'nosotros', component: NosotrosComponent },

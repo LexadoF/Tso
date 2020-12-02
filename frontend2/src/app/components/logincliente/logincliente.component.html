@@ -1,16 +1,11 @@
 <div class="row">
-    <div class="col-md-12">
-        <div class="header-part">
-            <p>Inicio &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Ingresar</span></p>
-        </div>
-    </div>
-</div>
-<h2 class="text-center">Inicia Sesió Para Continuar</h2>
-<div class="row">
     <div class="col-md-4">
     </div>
     <div class="col-md-4 col-md-offset-5">
-        <div class="jumbotron">
+        <div class="jumbotron ">
+            <h2 class="text-center">Inicia Sesió Para Continuar</h2>
+            <p class="text-center">Hola! por favor ingresa tus datos.</p>
+            <p class="text-center">También puedes "Crear una cuenta" abajo.</p>
             <form [formGroup]="angForm">
                 <div class="form-group">
                     <label for="email"><strong>Correo</strong></label>
@@ -29,9 +24,14 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" align="center">
                     <button type="button" class="btn btn-outline-success" (click)="IniciarSesion()">Aceptar</button>
                 </div>
+                <p class="text-center">¿Nuevo aquí?</p>
+
+                <a routerLink="/registrar" routerLinkActive="active">
+                    <p class="a text-center">Crear una cuenta</p>
+                </a>
             </form>
         </div>
     </div>

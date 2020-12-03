@@ -1,5 +1,7 @@
 .btn {
     margin: 5px;
+    color: black;
+    /* background-color: #f39c12; */
 }
 
 .a:hover {

@@ -249,6 +249,11 @@ a {
 
 .team {
     padding-bottom: 92px;
+    align-items: center;
+}
+
+.row {
+    align-items: center;
 }
 
 .team h2 {

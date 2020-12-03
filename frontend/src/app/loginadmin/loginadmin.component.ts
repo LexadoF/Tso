@@ -17,7 +17,8 @@ export class LoginadminComponent implements OnInit {
   loginv = {
     id: null,
     email: null,
-    password: null
+    password: null,
+    idrol: null
   };
 
   constructor(private fb: FormBuilder, private dataService: ApisService, private router: Router) {

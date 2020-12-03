@@ -22,6 +22,10 @@ import { LogincComponent } from './loginc/loginc.component';
 import { LoginvComponent } from './loginv/loginv.component';
 import { LoginadminComponent } from './loginadmin/loginadmin.component';
 
+// servicios
+import { ApiService } from './api.service';
+import { ApisService } from './loginadmin/servicios/apis.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +53,10 @@ import { LoginadminComponent } from './loginadmin/loginadmin.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+ApiService,
+ApisService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

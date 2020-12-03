@@ -27,12 +27,23 @@ return Users;
 }));
 }
 
-public userregistration(name,email,pwd) {
-return this.httpClient.post<any>(this.baseUrl + '/register.php', { name, email, pwd })
-.pipe(map(Users => {
-return Users;
-}));
-}
+public admin(username, password, idrol) {
+    alert(username);
+    return this.httpClient.post<any>(this.baseUrl + '/login.php', { username, password, idrol })
+    .pipe(map(Users => {
+    this.setToken(Users[0].name);
+    this.getLoggedInName.emit(true);
+    return Users;
+    }));
+    }
+
+
+// public userregistration(name,email,pwd) {
+// return this.httpClient.post<any>(this.baseUrl + '/register.php', { name, email, pwd })
+// .pipe(map(Users => {
+// return Users;
+// }));
+// }
 
 // token
 setToken(token: string) {

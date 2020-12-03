@@ -1,4 +1,42 @@
-<p>contacto works!</p>
-<h2>Contáctenos!</h2>
-<p>Envíanos tu solicitud, dudas, quejas o reclamos llenando el siguiente formulario. Déjanos tus datos y nos pondremos en contacto contigo. </p>
-<p>Puedes comunicarte con nosotros através del télefono +57(1) 2142409 , al correo electrónico: tso@gmail.com o visitandonos en Mi kasa que por allá pero primero Touka La puerta.</p>
+<div class="container">
+    <div align="center">
+        <h1>LISTA DE USUARIOS REGISTRADOS</h1>
+        <table class="table table-responsive" *ngIf="logoutbtn">
+            <thead class="thead-dark  letrapequena">
+                <tr *ngIf="hayRegistros(); else no_personas_registradas">
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>EMAIL</th>
+                    <th>ASUNTO</th>
+                    <th>POSTRE</th>
+                    <th>MENSAJE</th>
+                    <th>MENSAJE</th>
+                    <th>BORRAR</th>
+                    <!--<td>SELECCIONAR</td>
+            -->
+                </tr>
+            </thead>
+            <tr *ngFor="let contacto of contactos1" class="letrapequena1">
+                <td> {{ contacto.id }} </td>
+                <td> {{ contacto.name }} </td>
+                <td> {{ contacto.email }} </td>
+                <td> {{ contacto.documento }} </td>
+                <td> {{ contacto.telefono }} </td>
+                <td> {{ contacto.direccion }} </td>
+                <td> {{ contacto.id_rol }} </td>
+                <td> <button class="btn btn-danger" (click)="EliminarPersona(contacto.documento)"> Borrar </button> </td>
+                <td> <button (click)="seleccionarUsuario(contacto.id)"> Seleccionar </button> </td>
+
+            </tr>
+
+        </table>
+
+
+        <ng-template #no_personas_registradas>
+            <h1 class="cambio_color1">
+                <p>No hay usuarios registrados.</p>
+            </h1>
+        </ng-template>
+
+    </div>
+</div>

@@ -18,6 +18,7 @@ constructor(private dataService: ApiService, private datas: ApisService) {
   if (this.dataService.isLoggedIn()) {
     console.log('loggedin');
     this.loginbtn = false;
+    this.logoutbtn = true;
   }
   else {
     this.loginbtn = true;

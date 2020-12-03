@@ -35,6 +35,18 @@ InsercionDatos(registro) {
     return this.httpClient.post(`${this.URL}registrar.php`, JSON.stringify(registro));
   }
 
+  listarUsuarios() {
+    return this.httpClient.get(`${this.URL}listar.php`);
+  }
+ 
+  seleccionarUsuario() {
+    return this.httpClient.get(`${this.URL}seleccionar.php`);
+  }
+
+  EliminarPersona(idPersona: number) {
+    return this.httpClient.get(`${this.URL}eliminar.php?idPersona=${idPersona}`);
+  }
+
 // token
 setToken(token: string) {
 localStorage.setItem('token', token);

@@ -12,6 +12,7 @@ import { AuthguardGuard } from './authguard.guard';
 import { LoginclienteComponent } from './components/logincliente/logincliente.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ProductoselectComponent } from './components/productoselect/productoselect.component';
+import { LoginadminComponent } from './components/loginadmin/loginadmin.component';
 
 const routes: Routes = [
 { path: 'inicio', component: InicioComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
 { path: 'contacto', component: ContactoComponent },
 { path: 'nosotros', component: NosotrosComponent },
 { path: 'logincliente', component: LoginclienteComponent },
+{ path: 'loginadmin', component: LoginadminComponent },
 { path: 'registrar', component: RegistrarComponent },
 // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
 {path: '**', pathMatch: 'full', redirectTo: 'inicio'}

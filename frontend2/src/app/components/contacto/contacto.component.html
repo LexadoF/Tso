@@ -8,7 +8,7 @@
 <section class="contact-us">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="contact">
                     <h2>Detalles de Contacto</h2>
                     <div class="col-md-6">
@@ -44,29 +44,42 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-6">
                 <div class="get_in_touch">
                     <h2>Contactanos!</h2>
-                    <form>
+                    <form [formGroup]="angForm" (ngSubmit)="onSubmit()">
                         <div class="form-group">
                             <label>Tu Nombre</label>
-                            <input type="text" class="form-control" />
+                            <input type="text" formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nombre.errors }" />
+                            <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                                <div *ngIf="f.nombre.errors.required">Por favor, ingresa tus Nombres y Apellidos</div>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label>Tu Correo</label>
-                            <input type="text" formControlName="correo" class="form-control" />
+                            <input type="text" formControlName="correo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" />
+                            <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+                                <div *ngIf="f.correo.errors.required">El Correo es obligatorio</div>
+                                <div *ngIf="f.correo.errors.email">Por favor, ingresa tu Correo</div>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label>Tu Numero de Telefono</label>
-                            <input type="text" class="form-control" />
+                            <input type="text" formControlName="telefono" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telefono.errors }" />
+                            <div *ngIf="submitted && f.telefono.errors" class="invalid-feedback">
+                                <div *ngIf="f.telefono.errors.required">Por favor, ingresa tu numero de telefono</div>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label>Tu Mensaje</label>
-                            <textarea type="text-area" rows="10" cols="50" class="form-control"></textarea>
+                            <textarea type="text-area" rows="10" cols="50" class="form-control" formControlName="mensaje" [ngClass]="{ 'is-invalid': submitted && f.mensaje.errors }"></textarea>
+                            <div *ngIf="submitted && f.mensaje.errors" class="invalid-feedback">
+                                <div *ngIf="f.mensaje.errors.required">Por favor, ingresa tu Mensaje.</div>
+                            </div>
                         </div>
 
                         <div class="form-group">

@@ -18,6 +18,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ProductoselectComponent } from './components/productoselect/productoselect.component';
+import { LoginadminComponent } from './components/loginadmin/loginadmin.component';
+
+// servicios
+import { ApiService } from './services/login/api.service';
+import { LoginService } from './components/loginadmin/services/login.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,8 @@ import { ProductoselectComponent } from './components/productoselect/productosel
     FooterComponent,
     ChatComponent,
     PerfilComponent,
-    ProductoselectComponent
+    ProductoselectComponent,
+    LoginadminComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,10 @@ import { ProductoselectComponent } from './components/productoselect/productosel
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

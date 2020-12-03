@@ -1,13 +1,13 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { Users } from '../../users';
+import { Users } from './users';
 
 @Injectable({
 providedIn: 'root'
 })
 
-export class ApiService {
+export class LoginService {
 redirectUrl: string;
 baseUrl = 'http://localhost/angular_admin/php';
 URL = 'http://localhost/Backend/cliente/';
@@ -16,9 +16,9 @@ URL = 'http://localhost/Backend/cliente/';
 var: null;
 constructor(private httpClient: HttpClient) { }
 
-public userlogin(username, password) {
+public adminlogin(username, password) {
 alert(username);
-return this.httpClient.post<any>(this.baseUrl + '/login.php', { username, password })
+return this.httpClient.post<any>(this.baseUrl + '/logina.php', { username, password })
 .pipe(map( Users => {
 this.setToken(Users[0].name);
 this.getLoggedInName.emit(true);
@@ -32,17 +32,6 @@ return Users;
 // return Users;
 // }));
 // } traer los datos de la bd y mandarlos a user y despues llamarlos y ponerlos en un form
-listarDatos(){
-
-}
-
-InsercionDatos(registro) {
-    return this.httpClient.post(`${this.URL}registrar.php`, JSON.stringify(registro));
-  }
-
-listarPerfil() {
-  return this.httpClient.get(`${this.baseUrl}/listar.php`);
-}
 
 // token
 setToken(token: string) {

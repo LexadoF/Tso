@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+
+    <!-- <!DOCTYPE html> -->
+    <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Prodact Display</title>
@@ -21,9 +22,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <ul>
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">Checkout</a></li>
-                        <li><a href="#">dashbord</a></li>
+                        <li><a href="#">Cuenta</a></li>
+                        <!-- <li><a href="#">Checkout</a></li>
+                        <li><a href="#">dashbord</a></li> -->
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -54,14 +55,8 @@
                 <div class="row">
                     <div class="col-md-12">
                     <form method="post" action="#">
-                        <input type="text" placeholder="Search for product">
-                    <select>
-                        <option>One</option>
-                        <option>Two</option>
-                        <option>Three</option>
-                        <option>Four</option>
-                        <option>Five</option>
-                    </select>
+                        <input type="text" placeholder="Busqueda">
+
                     <button><i class="fa fa-search"></i></button>
                     </form>
                     </div>
@@ -81,12 +76,11 @@
                 </div>
                 <div class="col-md-7">
                     <ul class="nav navbar-nav">
-                      <li class="active"><a href="#">HOME</a></li>
-                      <li><a href="#">SHOP</a></li>
-                      <li><a href="#">BLOG</a></li>
-                      <li><a href="#">SHORTCODE</a></li>
-                      <li><a href="#">FEATURE</a></li>
-                      <li><a href="#">PAGES</a></li>
+                    <li class="active"><a href="index.php">INICIO</a></li>
+                            <li><a href="productos.php">TIENDA</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="#">NOSOTROS</a></li>
+                            <li><a href="contacto.php">CONTACTO</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -98,13 +92,13 @@
         </div>
     </section>
 </header>
-<section class="header-feahion">
+<!-- <section class="header-feahion">
     <img src="img/header-image.jpg" alt="">
     <div class="header-text">
         <h4>FREE SHIPPING ON ORDERS OVER $100!</h4>
         <h3>HOT NEW RANGE <br> IN STOCK!</h3>
     </div>
-</section>
+</section> -->
 
 <section class="product-s-display">
     <div class="container">
@@ -135,7 +129,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="bar">
-                        <h2>Recommended for you</h2>
+                        <h2>Recomendados</h2>
                         <img alt="" src="img/bar.jpg">
                     </div>
                 </div>
@@ -216,20 +210,15 @@
             </div>
         </div>
 </div>
-<section class="season">
-   <img src="img/season.jpg" alt="">
-    <div class="ovearlay"></div>
-    <div class="text">
-        <h2>End of season sale </h2>
-        <h3>Up to 35% off Women’s Denim </h3>
-    </div>
-</section>
+
 <section class="latest-product">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="bar">
-                <h2>Latest products</h2>
+                <h2>Ultimos productos
+
+                </h2>
                     <img src="img/bar.jpg" alt="">
                 </div>
             </div>
@@ -306,209 +295,6 @@
     </div>
 </section>
 
-<section class="t-shart-brand">
-    <div class="container">
-        <div class="row">
-                <div class="col-md-4">
-                <div class="t_shart">
-                   <div class="row">
-                       <div class="col-md-5">
-                           <div class="t_shart_img">
-                        <img src="img/t-shart-brand1.jpg" alt="">
-                    </div>
-                       </div>
-                       <div class="col-md-7">
-                           <div class="t_shart_text">
-                        <h2>All Brand T-sharts</h2>
-                        <a href="#"><p>See More</p></a>
-                    </div>
-                       </div>
-                   </div>
-                 </div>
-            </div>
-                <div class="col-md-4">
-                <div class="t_shart">
-                   <div class="row">
-                       <div class="col-md-5">
-                           <div class="t_shart_img">
-                        <img src="img/s-bag.jpg" alt="">
-                    </div>
-                       </div>
-                       <div class="col-md-7">
-                           <div class="t_shart_text">
-                        <h2>All Brand T-sharts</h2>
-                        <a href="#"><p>See More</p></a>
-                    </div>
-                       </div>
-                   </div>
-                 </div>
-            </div>
-                <div class="col-md-4">
-                <div class="t_shart">
-                   <div class="row">
-                       <div class="col-md-5">
-                           <div class="t_shart_img">
-                        <img src="img/w-bag.jpg" alt="">
-                    </div>
-                       </div>
-                       <div class="col-md-7">
-                           <div class="t_shart_text">
-                        <h2>All Brand T-sharts</h2>
-                        <a href="#"><p>See More</p></a>
-                    </div>
-                       </div>
-                   </div>
-                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-    
-<section class="best-seller">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="bar">
-                    <h2>BEST SELLERS</h2>
-                    <img alt="" src="img/bar.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="best-seller-part">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="best-sell-part">
-                            <img src="img/best-sell-img.jpg" alt="">
-                            <p><i class="fa fa-heart" aria-hidden="true"></i></p>
-                            <h4>QUICK VIEW</h4>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="prodact-s-text">
-                                        <h3>Pocket Tee</h3>
-                                        <p><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><span><i aria-hidden="true" class="fa fa-star"></i></span></p>
-                                        <h5>$250</h5>
-                                        <p class="cart">ADD TO CART</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="best-sell-part">
-                            <img src="img/best-sell-img1.jpg" alt="">
-                            <p><i class="fa fa-heart" aria-hidden="true"></i></p>
-                            <h4>QUICK VIEW</h4>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="prodact-s-text">
-                                        <h3>Pocket Tee</h3>
-                                        <p><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><span><i aria-hidden="true" class="fa fa-star"></i></span></p>
-                                        <h5>$250</h5>
-                                        <p class="cart">ADD TO CART</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="best-sell-part">
-                            <img src="img/best-sell-img2.jpg" alt="">
-                            <p><i class="fa fa-heart" aria-hidden="true"></i></p>
-                            <h4>QUICK VIEW</h4>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="prodact-s-text">
-                                        <h3>Pocket Tee</h3>
-                                        <p><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><i aria-hidden="true" class="fa fa-star"></i><span><i aria-hidden="true" class="fa fa-star"></i></span></p>
-                                        <h5>$250</h5>
-                                        <p class="cart">ADD TO CART</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="col-md-5">
-                    <div class="winter-cloth">
-                   <div class="big-cloth">
-                       <img src="img/big-cloth.jpg" alt="">
-                   </div>
-                   <div class="row">
-                      <div class="col-md-12">
-                           <div class="s-cloth">
-                               <img src="img/s-cloth.jpg" alt="">
-                           </div>
-                           <div class="s-cloth">
-                               <img src="img/s-cloth.jpg" alt="">
-                           </div>
-                           <div class="s-cloth">
-                               <img src="img/s-cloth.jpg" alt="">
-                           </div>
-                           <div class="s-cloth">
-                               <img src="img/s-cloth.jpg" alt="">
-                           </div>
-                       </div>
-                   </div>
-                   <div class="row">
-                       <div class="col-md-12">
-                           <div class="w_text">
-                               <h4>LOREM IPSU, DOLOR SITE EMIT</h4>
-                               <h5>Lorem</h5>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="row">
-                       <div class="col-md-6">
-                           <div class="dollar">
-                               <p>&#36;399.99</p>
-                           </div>
-                       </div>
-                       <div class="col-md-6">
-                           <div class="option">
-                               <button>SELECT OPTION</button>
-                           </div>
-                       </div>
-                   </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</section>
-    
-<section class="brands">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="bar">
-                    <h2>BRANDS WE STOCK</h2>
-                    <img src="img/bar.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</section>
-    <section class="yyyy">
-        <div class="container">
-            <div class="row">
-            <div class="col-md-12">
-                <div class="slider-container">
-                    <ul id="slider">
-                        <li><a href="#"><img src="img/brand-img1.jpg"></a></li>
-                        <li><a href="#"><img src="img/brand-img2.jpg"></a></li>
-                        <li><a href="#"><img src="img/brand-img3.jpg"></a></li>
-                        <li><a href="#"><img src="img/brand-img4.jpg"></a></li>
-                        <li><a href="#"><img src="img/brand-img5.jpg"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
     
     <section class="featured">
         <div class="container">
@@ -632,12 +418,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    
-    <section class="fashion">
-      <div class="f-overlay"></div>
-       <img src="img/footer-top-images.jpg" alt="">
-        <h2>FASHION NEW</h2>
     </section>
 
     

@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FAQ</title>
+    <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,7 +34,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="a-right">
-                            <a href="/login.php">
+                            <a href="#">
                                 <p><span><i class="fa fa-user"></i></span>Login</p>
                             </a>
                             <a href="#">
@@ -69,79 +68,100 @@
                     </div>
                     <div class="col-md-2">
                         <div class="cart">
-                            <p><i class="fa fa-cart-arrow-down"></i><sup>5</sup>&#36;&nbsp;&nbsp;100.000</p>
+                            <p><i class="fa fa-cart-arrow-down"></i><sup>0</sup> &#36;&nbsp;&nbsp;0.00</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="header-part">
-                            <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;FAQ</span></p>
+                            <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;CONTACT US</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </header>
-    <section class="faq-page">
+    <section class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28747.851497593252!2d89.24895624999999!3d25.754656999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1484143225401" width="100%" height="550" frameborder="0" style="border:0"
+            allowfullscreen></iframe>
+    </section>
+
+    <!-- contacto -->
+    <section class="contact-us">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h2>FAQ Page</h2>
-                </div>
-            </div>
-            <div class="accordion-start">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="desion">
-                            <p>ALL</p>
-                            <p>DESIGN</p>
-                            <p>FASHION</p>
-                            <p>PHOTOGRAPHY</p>
-                            <p>TECNICAL </p>
-                            <p>VIDEO</p>
+                <div class="col-md-6">
+                    <div class="contact">
+                        <h2>Contact Details</h2>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>0800 366 8747</p>
+                                    <p>8923 558 0024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>0800 366 8747</p>
+                                    <p>8923 558 0024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>support@shawon.com</p>
+                                    <p>shawon@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>shawon_store</p>
+                                    <p>abir_support</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                        <div id="accordion">
-                            <h3>Is simply dummy text of the printing and typesetting </h3>
-                            <div>
-                                <p>1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum
-                                    has been the industry's.</p>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            </div>
-                            <h3>Is simply dummy text of the printing and typesetting </h3>
-                            <div>
-                                <p>1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum
-                                    has been the industry's.</p>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            </div>
-                            <h3>Is simply dummy text of the printing and typesetting </h3>
-                            <div>
-                                <p>1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum
-                                    has been the industry's.</p>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            </div>
-                            <h3>Is simply dummy text of the printing and typesetting </h3>
-                            <div>
-                                <p>1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum
-                                    has been the industry's.</p>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book. It has survived not only five centurie but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="get_in_touch">
+                        <h2>Get in Touch with Us</h2>
+                        <form action="#" method="post">
+                            <p>Your Name (required)</p>
+                            <input type="text" name="">
+                            <p>Your Email (required)</p>
+                            <input type="email" name="">
+                            <p>Your Company</p>
+                            <input type="text" name="">
+                            <p>Telephone Number</p>
+                            <input type="text" name="">
+                            <p>Your Message</p>
+                            <textarea rows="10" cols="50"></textarea>
+                            <input type="submit" value="SEND">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <footer>
         <div class="footer_top">
@@ -223,22 +243,9 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script>
-        jQuery(document).ready(function() {
-            var icons = {
-                header: "ui-icon-circle-plus",
-                activeHeader: "ui-icon-circle-minus"
-            };
-            $("#accordion").accordion({
-                icons: icons
-            });
-        })
-    </script>
     <script src="js/active.js"></script>
-
 </body>
 
 </html>

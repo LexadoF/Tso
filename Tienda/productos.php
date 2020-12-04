@@ -39,7 +39,7 @@ foreach($listaProductos as $producto){ ?>
 
         <span><?php echo $producto['nombre']; ?></span>
         <h5 class="card-title">$ <?php echo $producto['precio']; ?></h5>
-        <p class="card-text">desc</p>
+        <p class="card-text"></p>
         <form action="" method="post"  >
             <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($producto['id'],COD, KEY) ; ?>">
             <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($producto['nombre'],COD, KEY) ;?>">

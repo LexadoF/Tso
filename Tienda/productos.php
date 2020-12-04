@@ -65,7 +65,15 @@
             </div>
         </div>
     </section>
+
 </header>
+<section class="header-feahion">
+    <img src="img/header-image.jpg" alt="">
+    <div class="header-text">
+        <h4>FREE SHIPPING ON ORDERS OVER $100!</h4>
+        <h3>HOT NEW RANGE <br> IN STOCK!</h3>
+    </div>
+</section>
 
 
    

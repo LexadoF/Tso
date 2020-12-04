@@ -8,6 +8,9 @@ if (!isset($_SESSION['administrador']))
    /* nos envía a la siguiente dirección en el caso de no poseer autorización */
    header("location:../index.php"); 
 }
+$user=$_SESSION['administrador'];
+
+$sql="SELECT * FROM administrador where id=$user"; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +30,7 @@ if (!isset($_SESSION['administrador']))
             <div class="row">
                 <div class="col-md-4">
                     <ul>
+                    <li><a href="">Hola <?php echo $user ?></a></li>
                     <li><a href="/Tienda/administrador/gestion.php">Gestion</a></li>
                     </ul>
                 </div>

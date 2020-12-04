@@ -8,6 +8,9 @@ if (!isset($_SESSION['cliente']))
    /* nos envía a la siguiente dirección en el caso de no poseer autorización */
    header("location:../index.php"); 
 }
+$user=$_SESSION['cliente'];
+
+$sql="SELECT * FROM cliente where id=$user";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +30,7 @@ if (!isset($_SESSION['cliente']))
             <div class="row">
                 <div class="col-md-4">
                     <ul>
+                    <li><a href="">Hola <?php echo $user ?></a></li>
                         <li><a href="/Tienda/cliente/cuenta.php">Cuenta</a></li>
                     </ul>
                 </div>

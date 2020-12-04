@@ -52,16 +52,18 @@
                       <li><a href="/Tienda/productos.php">PRODUCTOS</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2">
-                    <div class="cart">
-                        <p><i class="fa fa-cart-arrow-down"></i><sup>0</sup> &#36;&nbsp;&nbsp;0.00</p>
-                    </div>
-                </div>
+                <li class="nav-item active">
+                    <a class="fa fa-cart-arrow-down" href="productos/mostrarCarrito.php">carrito &#36;&nbsp;&nbsp; (
+                        <?php
+                         echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
+                    
+                    ?> )</a>
+                </li>
             </div>
             <div class="row">
                 <div class="col-md-12">
                    <div class="header-part">
-                    <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;BLOG</span></p>
+                    <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Noticias</span></p>
                     </div>
                 </div>
             </div>
@@ -71,7 +73,7 @@
 <section class="blog_slider">
    <div class="blog_overlay"></div>
     <img src="img/blog-slider.jpg" alt="Blog Slider">
-    <h2>BLOG</h2>
+    <h2>Noticias</h2>
 </section>
 <section class="blog-slide-text">
     <div class="container">

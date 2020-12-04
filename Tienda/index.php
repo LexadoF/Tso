@@ -51,11 +51,13 @@
                       <li><a href="/Tienda/productos.php">PRODUCTOS</a></li>
                     </ul>
                 </div>
-                <div class="col-md-2">
-                    <div class="cart">
-                        <p><i class="fa fa-cart-arrow-down"></i><sup>0</sup> &#36;&nbsp;&nbsp;0.00</p>
-                    </div>
-                </div>
+                <li class="nav-item active">
+                    <a class="fa fa-cart-arrow-down" href="productos/mostrarCarrito.php">carrito &#36;&nbsp;&nbsp; (
+                        <?php
+                         echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
+                    
+                    ?> )</a>
+                </li>
             </div>
         </div>
     </section>

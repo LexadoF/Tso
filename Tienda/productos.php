@@ -16,7 +16,7 @@ include 'productos/templates/cabecera.php';
     echo $mensaje;
     ?>
 
-    <a href="" class="badge badge-succes">ver carrito</a>
+    <a href="productos/mostrarCarrito.php" class="badge badge-succes">ver carrito</a>
     </div>
     <?php }?>
 

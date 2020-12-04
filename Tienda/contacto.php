@@ -1,9 +1,38 @@
+<?php 
+
+require("./conexion/bd.php");
+
+    if(isset($_POST['registrar'])){
+        $nombre = trim($_POST['nombre']);
+        $correo = trim($_POST['correo']);
+        $telefono = trim($_POST['telefono']);
+        $mensaje = trim($_POST['mensaje']);
+        if (!preg_match('/^(?=.*\d)(?=.*[A-Za-z-0-9])[a-zA-Z-0-9]{6,16}$/', $mensaje))
+            {
+                // echo "szs";
+                $_SESSION['mensaje'] = "La contraseña debe tener al entre 6 y 16 caracteres
+                <br>
+                Debe contener un caracter numerico";
+                $_SESSION['tipo_mensaje'] = "danger";
+                // header("Location: registroAdm.php");
+            }else{
+                $consulta = "INSERT INTO contacto(nombre, telefono, email, mensaje) VALUES 
+                ('$nombre','$correo','$telefono','$mensaje')";
+                $resultado = mysqli_query($conn,$consulta);
+                if($resultado){
+                    $_SESSION['mensaje'] = "Se ha registrado exitosamente";
+                    $_SESSION['tipo_mensaje'] = "info";
+                    // header("Location:../login.php");
+            } 
+    }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <title>Contacto</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,6 +46,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
+                   
+                </div>
+                <div class="col-md-4">
                     <div class="icon">
                        <a href="#"><i class="fa fa-facebook"></i></a>
                        <a href="#"><i class="fa fa-twitter"></i></a>
@@ -26,7 +58,7 @@
                 <div class="col-md-4">
                    <div class="a-right">
                         <a href="/Tienda/login.php"><p><span><i class="fa fa-user"></i></span>Iniciar Sesión</p></a>
-                        <a href="#"><p><span><i class="fa fa-pencil"></i></span>Registrarse</p></a>
+                        <a href="/Tienda/registrarse.php"><p><span><i class="fa fa-pencil"></i></span>Registrarse</p></a>
                    </div>
                 </div>
             </div>
@@ -58,20 +90,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="header-part">
-                            <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;CONTACT US</span></p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </section>
     </header>
-    <section class="maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28747.851497593252!2d89.24895624999999!3d25.754656999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1484143225401" width="100%" height="550" frameborder="0" style="border:0"
-            allowfullscreen></iframe>
-    </section>
 
     <!-- contacto -->
     <section class="contact-us">
@@ -79,15 +101,15 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="contact">
-                        <h2>Contact Details</h2>
+                        <h2>Detalles Del Contacto</h2>
                         <div class="col-md-6">
                             <div class="contact_icon">
                                 <div class="icon">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                 </div>
                                 <div class="c_text">
-                                    <p>0800 366 8747</p>
-                                    <p>8923 558 0024</p>
+                                    <p>Buscanos En Facebook Como:</p>
+                                    <a href="">Tso_Facebook</a>
                                 </div>
                             </div>
                         </div>
@@ -97,8 +119,8 @@
                                     <i class="fa fa-twitter" aria-hidden="true"></i>
                                 </div>
                                 <div class="c_text">
-                                    <p>0800 366 8747</p>
-                                    <p>8923 558 0024</p>
+                                    <p>Buscanos En Twitter Como:</p>
+                                    <a href="">Tso_Twitter</a>
                                 </div>
                             </div>
                         </div>
@@ -108,19 +130,8 @@
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                 </div>
                                 <div class="c_text">
-                                    <p>support@shawon.com</p>
-                                    <p>shawon@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="contact_icon">
-                                <div class="icon">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </div>
-                                <div class="c_text">
-                                    <p>shawon_store</p>
-                                    <p>abir_support</p>
+                                    <p>Envianos Un Correo a:</p>
+                                    <p>tso@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -128,19 +139,17 @@
                 </div>
                 <div class="col-md-6">
                     <div class="get_in_touch">
-                        <h2>Get in Touch with Us</h2>
-                        <form action="#" method="post">
-                            <p>Your Name (required)</p>
-                            <input type="text" name="">
-                            <p>Your Email (required)</p>
-                            <input type="email" name="">
-                            <p>Your Company</p>
-                            <input type="text" name="">
-                            <p>Telephone Number</p>
-                            <input type="text" name="">
-                            <p>Your Message</p>
-                            <textarea rows="10" cols="50"></textarea>
-                            <input type="submit" value="SEND">
+                        <h2>Contactanos!</h2>
+                        <form action="contacto.php" method="POST">
+                            <p>Tu Nombre</p>
+                            <input type="text" name="nombre">
+                            <p>Tu Correo</p>
+                            <input type="email" name="correo">
+                            <p>Tu Numero De Telefono</p>
+                            <input type="text" name="telefono">
+                            <p>Tu Mensaje</p>
+                            <textarea rows="10" cols="50" name="mensaje"></textarea>
+                            <input type="submit" name="registrar" value="Enviar">
                         </form>
                     </div>
                 </div>
@@ -150,85 +159,59 @@
 
 
     <footer>
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>INFORMATION</h2>
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Productos</h2>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>No Se</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Aun Sigo sin saber</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Como es la vida todavia no se</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-contact">
+                        <h2>Contacto</h2>
                         <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Moravia , Medellín</p>
                         </a>
                         <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i>+57 301 279 53 91</p>
                         </a>
                         <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i>tso@gmail.com</p>
                         </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                    </div>
-                    <div class="col-md-4 center">
-                        <h2>INFORMATION</h2>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-contact">
-                            <h2>CONTACT US</h2>
-                            <a href="#">
-                                <p><i class="fa fa-map-marker" aria-hidden="true"></i>Rangpur , Bangladesh</p>
-                            </a>
-                            <a href="#">
-                                <p><i class="fa fa-phone" aria-hidden="true"></i>+88 01761070282</p>
-                            </a>
-                            <a href="#">
-                                <p><i class="fa fa-envelope" aria-hidden="true"></i>sshahriar458@gmail.com</p>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer_bottom">
-            <div class="footer_overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="copy_txt">
-                            <p>Copyright © 2014 Designed by <span>shawon</span></p>
-                        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="footer_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="copy_txt">
+                        <p>Copyright © 2020 Diseñado por <span>Los Mongolines</span></p>
                     </div>
-                    <div class="col-md-8">
-                        <div class="footer_logo">
-                            <img src="img/fedex.png">
-                            <img src="img/master-card.png">
-                            <img src="img/paypal.png">
-                            <img src="img/visa.png">
-                            <img src="img/american-express.png">
-                            <img src="img/dhl.png">
-                        </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="footer_logo">
+                        <img src="img/master-card.png">
+                        <img src="img/paypal.png">
+                        <img src="img/visa.png">
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/active.js"></script>

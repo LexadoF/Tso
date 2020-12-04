@@ -1,8 +1,19 @@
+<?php 
+//abrimos la sesión
+session_start();
+ 
+//Si la variable sesión está vacía
+if (!isset($_SESSION['administrador'])) 
+{
+   /* nos envía a la siguiente dirección en el caso de no poseer autorización */
+   header("location:../index.php"); 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us</title>
+    <title>Inicio</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -16,24 +27,19 @@
             <div class="row">
                 <div class="col-md-4">
                     <ul>
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">Checkout</a></li>
-                        <li><a href="#">dashbord</a></li>
+                        <li><a href="/Tienda/administrador/gestion.php">Gestion</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <div class="icon">
                        <a href="#"><i class="fa fa-facebook"></i></a>
                        <a href="#"><i class="fa fa-twitter"></i></a>
-                       <a href="#"><i class="fa fa-google-plus"></i></a>
-                       <a href="#"><i class="fa fa-linkedin"></i></a>
-                       <a href="#"><i class="fa fa-wifi"></i></a>
+                       <a href="#"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                    <div class="a-right">
-                        <a href="#"><p><span><i class="fa fa-user"></i></span>Login</p></a>
-                        <a href="#"><p><span><i class="fa fa-pencil"></i></span>Register</p></a>
+                        <a href="/Tienda/administrador/cerrar.php"><p><span><i class="fa fa-pencil"></i></span>Cerrar Sesión</p></a>
                    </div>
                 </div>
             </div>
@@ -45,17 +51,15 @@
             <div class="row">
                 <div class="col-md-3">
                    <div class="logo">
-                    <a href="#"><h2>LOGO</h2></a>
+                    <a href="/Tienda/administrador/index.php"><h2>TSO</h2></a>
                    </div>
                 </div>
                 <div class="col-md-7">
                     <ul class="nav navbar-nav">
-                      <li class="active"><a href="#">HOME</a></li>
-                      <li><a href="#">SHOP</a></li>
-                      <li><a href="#">BLOG</a></li>
-                      <li><a href="#">SHORTCODE</a></li>
-                      <li><a href="#">FEATURE</a></li>
-                      <li><a href="#">PAGES</a></li>
+                      <li class="active"><a href="/Tienda/administrador/index.php">INICIO</a></li>
+                      <li><a href="/Tienda/administrador/nosotros.php">NOSOTROS</a></li>
+                      <li><a href="/Tienda/administrador/contacto.php">CONTACTO</a></li>
+                      <li><a href="/Tienda/administrador/productos.php">PRODUCTOS</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -64,254 +68,155 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                   <div class="header-part">
-                    <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ABOUT US</span></p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </header>
-<section class="slider">
-    <img src="img/slider-about.jpg" alt="Slider">
-    <h3>ABOUT US</h3>
+<section class="blog_slider">
+   <div class="blog_overlay"></div>
+    <img src="img/blog-slider.jpg" alt="Blog Slider">
+    <h2>Inicio</h2>
 </section>
-<section class="our_skill">
+<section class="blog-slide-text">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="text">
-                    <h2>Who are we?</h2>
-                    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum 
-been the industry's standard dummy text ever since the 1500s, when an 
-printer took a galley of type</p>
-               <p>and scrambled it to make a type specimen book. It has survived not only five 
-but also the leap into electronic typesetting, remaining essentially unchanged
-larised in the 1960s with the release of</p>
+            <div class="col-md-9">
+            <div class="b-slide-text">
+               <div class="row">
+                    <div class="col-md-5">
+                        <div class="b-slide">
+                            <img src="img/blog-slide-1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="b-text">
+                            <h2> BloodBorne </h2>
+                       <h4>jajajaja</h4>
+                       <a href="#" class="read-more">Ver Más</a>
+                        </div>
+                    </div>
                 </div>
+               </div>
             </div>
-            <div class="col-md-6">
-                 <div class="progress_bar">
-                  <h2>Our skills</h2>
-                  <p>Photoshop</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
-                  </div>
-                  <p>Wordpress</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
-                  </div>
-                  <p>Html/Css</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>
-                  </div>
-                  <p>Php</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:55%"></div>
-                  </div>
-                  </div>
+            <div class="col-md-3">
+                <div class="blog-sidebar">
+                               <h2>Nuevos Productos</h2>
+                        <div class="resent-post">
+                            <div class="resent-post-single">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="../img/gow.jpg" alt="">
+                                        <div class="text text-center">
+                                            <a href=""><h3>God Of War</h3></a>
+                                            <p>$100.000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resent-post-single">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="../img/dark.jpg" alt="">
+                                        <div class="text">
+                                        <a href=""><h3>Dark Souls</h3></a>
+                                            <p>$100.000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="resent-post-single">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="../img/demons.png" alt="">
+                                        <div class="text">
+                                        <a href=""><h3>Demon's Souls</h3></a>
+                                            <p>$100.000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="blog-sidebar">
+                           <h2>Categorias</h2>
+                    <div class="categorie">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Accion</p>
+                                <p>Aventura</p>
+                                <p>Rpg</p>
+                                <p>Fps</p>
+                                <p>Lol?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </section>
-<section class="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Features</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-               <div class="text-img left">
-                   <img src="img/logo-one.jpg">
-                <h3>Tust Adrenalin</h3>
-                <p>Lorem ipsum dolor sit amet, has et probatus tem, ad sea alii cetero scripserit. Ius accusa legendos omittantur cu,</p>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="text-img center">
-                   <img src="img/logo-one.jpg">
-                <h3>Our Mission</h3>
-                <p>Lorem ipsum dolor sit amet, has et probatus tem, ad sea alii cetero scripserit. Ius accusa legendos omittantur cu,</p>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="text-img right">
-                   <img src="img/logo-two.jpg">
-                <h3>Fashion Style</h3>
-                <p>Lorem ipsum dolor sit amet, has et probatus tem, ad sea alii cetero scripserit. Ius accusa legendos omittantur cu,</p>
-               </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="team">
-   <div class="clear"></div>
-    <div class="container">
-       <div class="row">
-           <div class="col-md-12">
-               <h2>Meet The Team</h2>
-           </div>
-       </div>
-        <div class="row">
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema1.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="centre">
+                            <ul class="pagination pagination-lg">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="overlay"></div>
             </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema2.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema3.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema4.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema5.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema6.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema1.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-            <div class="col-md-3">
-               <div class="teams">
-                    <img src="img/tema2.jpg">
-                <div class="icon">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                </div>
-                <div class="overlay"></div>
-            </div>
-                <h3>Michael Williams</h3>
-                <p>CREATIVE LEAD</p>
-            </div>
-        </div>
-    </div>
-</section>
 <footer>
     <div class="footer_top">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>INFORMATION</h2>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
+                    <h2>Productos</h2>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>No Se</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Aun Sigo sin saber</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Como es la vida todavia no se</p>
+                    </a>
                 </div>
-                <div class="col-md-4 center">
-                    <h2>INFORMATION</h2>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                    <a href="#"><p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p></a>
-                </div>
+
                 <div class="col-md-4">
                     <div class="footer-contact">
-                        <h2>CONTACT US</h2>
-                        <a href="#"><p><i class="fa fa-map-marker" aria-hidden="true"></i>Rangpur , Bangladesh</p></a>
-                        <a href="#"><p><i class="fa fa-phone" aria-hidden="true"></i>+88 01761070282</p></a>
-                        <a href="#"><p><i class="fa fa-envelope" aria-hidden="true"></i>sshahriar458@gmail.com</p></a>
+                        <h2>Contacto</h2>
+                        <a href="#">
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Moravia , Medellín</p>
+                        </a>
+                        <a href="#">
+                            <p><i class="fa fa-phone" aria-hidden="true"></i>+57 301 279 53 91</p>
+                        </a>
+                        <a href="#">
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i>tso@gmail.com</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer_bottom">
-       <div class="footer_overlay"></div>
+        <div class="footer_overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="copy_txt">
-                        <p>Copyright © 2014  Designed by <span>shawon</span></p>
+                        <p>Copyright © 2020 Diseñado por <span>Los Mongolines</span></p>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="footer_logo">
-                        <img src="img/fedex.png">
                         <img src="img/master-card.png">
                         <img src="img/paypal.png">
                         <img src="img/visa.png">
-                        <img src="img/american-express.png">
-                        <img src="img/dhl.png">
                     </div>
                 </div>
             </div>

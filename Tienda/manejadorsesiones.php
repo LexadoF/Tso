@@ -49,7 +49,7 @@ else if(mysqli_num_rows($administrador) > 0)
 {
     session_start();
     $_SESSION['administrador']="$email";
-    header("Location: administrador/gestion.php");
+    header("Location: administrador/index.php");
     exit();
 } 
 else 

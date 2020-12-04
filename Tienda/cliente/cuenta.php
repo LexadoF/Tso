@@ -22,28 +22,24 @@ if (!isset($_SESSION['cliente']))
 </head>
 <body>
 <header>
-    <section class="header-top">
+<section class="header-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <ul>
-                        <li><a href="/cliente/cuenta.php">Cuenta</a></li>
-                        <li><a href="#">Checkout</a></li>
-                        <li><a href="#">dashbord</a></li>
+                        <li><a href="/Tienda/cliente/cuenta.php">Cuenta</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <div class="icon">
                        <a href="#"><i class="fa fa-facebook"></i></a>
                        <a href="#"><i class="fa fa-twitter"></i></a>
-                       <a href="#"><i class="fa fa-google-plus"></i></a>
-                       <a href="#"><i class="fa fa-linkedin"></i></a>
-                       <a href="#"><i class="fa fa-wifi"></i></a>
+                       <a href="#"><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
                    <div class="a-right">
-                        <a href="/cliente/cerrar.php"><p><span><i class="fa fa-pencil"></i></span>Cerrar Sesión</p></a>
+                        <a href="/Tienda/cliente/cerrar.php"><p><span><i class="fa fa-pencil"></i></span>Cerrar Sesión</p></a>
                    </div>
                 </div>
             </div>
@@ -55,17 +51,15 @@ if (!isset($_SESSION['cliente']))
             <div class="row">
                 <div class="col-md-3">
                    <div class="logo">
-                    <a href="#"><h2>LOGO</h2></a>
+                    <a href="/Tienda/cliente/index.php"><h2>TSO</h2></a>
                    </div>
                 </div>
                 <div class="col-md-7">
                     <ul class="nav navbar-nav">
-                      <li class="active"><a href="#">HOME</a></li>
-                      <li><a href="#">SHOP</a></li>
-                      <li><a href="#">BLOG</a></li>
-                      <li><a href="#">SHORTCODE</a></li>
-                      <li><a href="#">FEATURE</a></li>
-                      <li><a href="#">PAGES</a></li>
+                      <li class="active"><a href="/Tienda/cliente/index.php">INICIO</a></li>
+                      <li><a href="/Tienda/cliente/nosotros.php">NOSOTROS</a></li>
+                      <li><a href="/Tienda/cliente/contacto.php">CONTACTO</a></li>
+                      <li><a href="/Tienda/cliente/productos.php">PRODUCTOS</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -74,14 +68,8 @@ if (!isset($_SESSION['cliente']))
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                   <div class="header-part">
-                    <p>HOME &nbsp;&nbsp;&nbsp;<span><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;ABOUT US</span></p>
-                    </div>
-                </div>
-            </div>
         </div>
+    </section>
     </section>
 </header>
 <!-- formulario -->

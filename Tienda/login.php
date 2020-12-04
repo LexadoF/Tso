@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <title>Inicia Sesión</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -16,6 +16,9 @@
     <section class="header-top">
         <div class="container">
             <div class="row">
+                    <div class="col-md-4">
+                   
+                   </div>
                 <div class="col-md-4">
                     <div class="icon">
                        <a href="#"><i class="fa fa-facebook"></i></a>
@@ -26,7 +29,7 @@
                 <div class="col-md-4">
                    <div class="a-right">
                         <a href="/Tienda/login.php"><p><span><i class="fa fa-user"></i></span>Iniciar Sesión</p></a>
-                        <a href="#"><p><span><i class="fa fa-pencil"></i></span>Registrarse</p></a>
+                        <a href="/Tienda/registrarse.php"><p><span><i class="fa fa-pencil"></i></span>Registrarse</p></a>
                    </div>
                 </div>
             </div>
@@ -65,113 +68,92 @@
     <!-- Login -->
     <div class="container" align="center">
     <section class="contact-us">
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="row">
                 <div class="col-md-6">
                     <div class="get_in_touch">
-                    <h2>Inicia Sesión</h2>
-                    <form action="manejadorsesiones.php" method="post">
-                    <div class="form-group">
-                        <label for="usuario">Correo</label>
-                        <br>
-                        <input name="usuario" type="text" placeholder="Usuario">
-                    </div>
-                    <div class="form-group">
-                        <label form="password">Contraseña</label>
-                        <br>
-                        <input name="password"  type="password" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Aceptar" class="enviar">
-                    <div>
-                    </form>
+                            <h2>Inicia Sesión</h2>
+                            <form action="manejadorsesiones.php" method="post">
+                                <div class="form-group">
+                                    <label for="usuario">Correo</label>
+                                    <br>
+                                    <input name="usuario" type="text" placeholder="Usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label form="password">Contraseña</label>
+                                    <br>
+                                    <input name="password"  type="password" placeholder="Contraseña">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Acceder" class="enviar">
+                                <div>
+                            </form>
+                                <br>
+                                <br>
+                                <h5>¿Eres Admin?</h5>
+                                <a href="/Tienda/loginAdmin.php">Ingresa Aqui</a>
+                        
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
 </div>
 
-    <footer>
-        <div class="footer_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2>INFORMATION</h2>
+<footer>
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Productos</h2>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>No Se</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Aun Sigo sin saber</p>
+                    </a>
+                    <a href="#">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Como es la vida todavia no se</p>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-contact">
+                        <h2>Contacto</h2>
                         <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Moravia , Medellín</p>
                         </a>
                         <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i>+57 301 279 53 91</p>
                         </a>
                         <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i>tso@gmail.com</p>
                         </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                    </div>
-                    <div class="col-md-4 center">
-                        <h2>INFORMATION</h2>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                        <a href="#">
-                            <p><i class="fa fa-circle" aria-hidden="true"></i>Best sellers</p>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="footer-contact">
-                            <h2>CONTACT US</h2>
-                            <a href="#">
-                                <p><i class="fa fa-map-marker" aria-hidden="true"></i>Rangpur , Bangladesh</p>
-                            </a>
-                            <a href="#">
-                                <p><i class="fa fa-phone" aria-hidden="true"></i>+88 01761070282</p>
-                            </a>
-                            <a href="#">
-                                <p><i class="fa fa-envelope" aria-hidden="true"></i>sshahriar458@gmail.com</p>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer_bottom">
-            <div class="footer_overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="copy_txt">
-                            <p>Copyright © 2014 Designed by <span>shawon</span></p>
-                        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="footer_overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="copy_txt">
+                        <p>Copyright © 2020 Diseñado por <span>Los Mongolines</span></p>
                     </div>
-                    <div class="col-md-8">
-                        <div class="footer_logo">
-                            <img src="img/fedex.png">
-                            <img src="img/master-card.png">
-                            <img src="img/paypal.png">
-                            <img src="img/visa.png">
-                            <img src="img/american-express.png">
-                            <img src="img/dhl.png">
-                        </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="footer_logo">
+                        <img src="img/master-card.png">
+                        <img src="img/paypal.png">
+                        <img src="img/visa.png">
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/active.js"></script>

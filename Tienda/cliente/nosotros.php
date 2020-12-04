@@ -16,7 +16,7 @@ $sql="SELECT * FROM cliente where id=$user";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us</title>
+    <title>Nosotros</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">

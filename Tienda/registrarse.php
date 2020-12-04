@@ -24,7 +24,7 @@
                 if($resultado){
                     $_SESSION['mensaje'] = "Se ha registrado exitosamente";
                     $_SESSION['tipo_mensaje'] = "info";
-                    // header("Location:../login.php");
+                    header("Location: login.php");
             }
     }
     }
@@ -101,7 +101,9 @@
     <section class="contact-us">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+            <div class="col-md-4">
+            </div>
+                <div class="col-md-4 col-md-offset">
                     <div class="get_in_touch">
                     <h2>Registrate</h2>
                     <form action="registrarse.php" method="POST">
@@ -117,32 +119,32 @@
                     <div class="form-group">
                         <label for="documento">Documento</label>
                         <br>
-                        <input name="documento" type="text" placeholder="Documento">
+                        <input name="documento" type="text" placeholder="Documento" required>
                     </div>
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <br>
-                        <input name="name" type="text" placeholder="Nombre">
+                        <input name="name" type="text" placeholder="Nombre" required>
                     </div>
                     <div class="form-group">
                         <label for="direccion">Direccion</label>
                         <br>
-                        <input name="direccion" type="text" placeholder="Direccion">
+                        <input name="direccion" type="text" placeholder="Direccion" required>
                     </div>
                     <div class="form-group">
                         <label for="telefono">Telefono</label>
                         <br>
-                        <input name="telefono" type="text" placeholder="Telefono">
+                        <input name="telefono" type="text" placeholder="Telefono" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Correo</label>
                         <br>
-                        <input name="email" type="text" placeholder="Correo">
+                        <input name="email" type="text" placeholder="Correo" required>
                     </div>
                     <div class="form-group">
                         <label form="password">Contraseña</label>
                         <br>
-                        <input name="password"  type="password" placeholder="Contraseña">
+                        <input name="password"  type="password" placeholder="Contraseña" required>
                     </div>
                     <div class="form-group">
                         <input type="submit" name="registrar" value="Aceptar" >

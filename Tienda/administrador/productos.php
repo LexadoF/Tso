@@ -16,7 +16,7 @@ $sql="SELECT * FROM administrador where id=$user";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Prodact Display</title>
+    <title>Productos</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">

@@ -66,40 +66,39 @@
     </header>
 
     <!-- Login -->
-    <div class="container" align="center">
+<div class="container" align="center">
     <section class="contact-us">
         <!-- <div class="container"> -->
             <div class="row">
-                <div class="col-md-6">
+            <div class="col-md-4">
+            </div>
+                <div class="col-md-4 col-md-offset">
+                 
                     <div class="get_in_touch">
-                            <h2>Inicia Sesión</h2>
-                            <form action="manejadorsesiones.php" method="post">
-                                <div class="form-group">
-                                    <label for="usuario">Correo</label>
-                                    <br>
-                                    <input name="usuario" type="text" placeholder="Usuario">
-                                </div>
-                                <div class="form-group">
-                                    <label form="password">Contraseña</label>
-                                    <br>
-                                    <input name="password"  type="password" placeholder="Contraseña">
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Acceder" class="enviar">
-                                <div>
-                            </form>
+                        <h2>Inicia Sesión</h2>
+                        <form action="manejadorsesiones.php" method="post">
+                            <div class="form-group">
+                                <label for="usuario">Correo</label>
                                 <br>
+                                <input name="usuario" type="text" placeholder="Usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label form="password">Contraseña</label>
                                 <br>
-                                <h5>¿Eres Admin?</h5>
-                                <a href="/Tienda/loginAdmin.php">Ingresa Aqui</a>
-                        
+                                <input name="password"  type="password" placeholder="Contraseña" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Acceder" class="enviar">
+                            <div>
+                        </form>                      
                     </div>
                 </div>
             </div>
+       
         <!-- </div> -->
     </section>
 </div>
-
+<br><br><br><br><br>
 <footer>
     <div class="footer_top">
         <div class="container">

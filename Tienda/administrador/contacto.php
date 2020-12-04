@@ -12,12 +12,95 @@ $user=$_SESSION['administrador'];
 
 $sql="SELECT * FROM administrador where id=$user";
 ?>
+<?php
+// Include config file
+require_once "./gestion/config.php";
+ 
+// Define variables and initialize with empty values
+$nombre = $correo = $telefono = $mensaje = "";
+$name_err = $correo_err = $telefono_err = $mensaje_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+    // Validar Nombre
+    $input_name = trim($_POST["nombre"]);
+    if(empty($input_name)){
+        $name_err = "Ingresa un Nombre.";
+    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+        $name_err = "Ingresa Un Nombre Valido.";
+    } else{
+        $nombre = $input_name;
+    }
+    
+    // Validar Stock
+    $input_address = trim($_POST["correo"]);
+    if(empty($input_address)){
+        $correo_err = "Por Favor Ingresa Tu Correo.";     
+    } else{
+        $correo = $input_address;
+    }
+    
+    // Validar precio
+    $input_salary = trim($_POST["telefono"]);
+    if(empty($input_salary)){
+        $telefono_err = "Ingresa Tu Numero De Telefonico.";     
+    } elseif(!ctype_digit($input_salary)){
+        $telefono_err = "Por Favor Ingresa Tu Numero De Telefono.";
+    } else{
+        $telefono = $input_salary;
+    }
+
+    // Validar Categoria
+    $input_mensaje = trim($_POST["mensaje"]);
+    if(empty($input_mensaje)){
+        $mensaje_err = "Ingresa un mensaje.";
+    } elseif(!filter_var($input_mensaje, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+        $mensaje_err = "Ingresa Un Mensaje Valido.";
+    } else{
+        $mensaje = $input_mensaje;
+    }
+
+    
+    // Check input errors before inserting in database
+    if(empty($name_err) && empty($correo_err) && empty($telefono_err) && empty($mensaje_err)){
+        // Prepare an insert statement
+        $sql = "INSERT INTO contacto (nombre, correo, telefono, mensaje) VALUES (?, ?, ?, ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "ssss", $param_name, $param_address, $param_salary, $param_categoria);
+            
+            // Enviar Parametros
+            $param_name = $nombre;
+            $param_address = $correo;
+            $param_salary = $telefono;
+            $param_categoria = $mensaje;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Records created successfully. Redirect to landing page
+                header("location: /Tienda/administrador/contacto.php");
+                exit();
+            } else{
+                echo "Ha Ocurrido Un Error. Intenta Más Tarde.";
+            }
+        }
+         
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+    
+    // Close connection
+    mysqli_close($link);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
+    <title>Contacto</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -81,65 +164,82 @@ $sql="SELECT * FROM administrador where id=$user";
 
 <!-- contacto -->
 <section class="contact-us">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact">
-                    <h2>Detalles Del Contacto</h2>
-                    <div class="col-md-6">
-                        <div class="contact_icon">
-                            <div class="icon">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </div>
-                            <div class="c_text">
-                                <p>Buscanos En Facebook Como:</p>
-                                <a href="">Tso_Facebook</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="contact_icon">
-                            <div class="icon">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </div>
-                            <div class="c_text">
-                                <p>Buscanos En Twitter Como:</p>
-                                <a href="">Tso_Twitter</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact">
+                        <h2>Detalles Del Contacto</h2>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>Buscanos En Facebook Como:</p>
+                                    <a href="">Tso_Facebook</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="contact_icon">
-                            <div class="icon">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>Buscanos En Twitter Como:</p>
+                                    <a href="">Tso_Twitter</a>
+                                </div>
                             </div>
-                            <div class="c_text">
-                                <p>Envianos Un Correo a:</p>
-                                <p>tso@gmail.com</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact_icon">
+                                <div class="icon">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="c_text">
+                                    <p>Envianos Un Correo a:</p>
+                                    <p>tso@gmail.com</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="get_in_touch">
-                    <h2>Contactanos!</h2>
-                    <form action="contacto.php" method="POST">
-                        <p>Tu Nombre</p>
-                        <input type="text" name="nombre">
-                        <p>Tu Correo</p>
-                        <input type="email" name="correo">
-                        <p>Tu Numero De Telefono</p>
-                        <input type="text" name="telefono">
-                        <p>Tu Mensaje</p>
-                        <textarea rows="10" cols="50" name="mensaje"></textarea>
-                        <input type="submit" name="registrar" value="Enviar">
-                    </form>
+                <div class="col-md-6">
+                    <div class="get_in_touch">
+                        <h2>Contactanos!</h2>
+                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+
+                        <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
+                            <p>Tu Nombre</p>
+                            <input type="text" name="nombre" class="form-control" value="<?php echo $nombre; ?>">
+                            <span class="help-block"><?php echo $name_err;?></span>
+                        </div>  
+
+                        <div class="form-group <?php echo (!empty($correo_err)) ? 'has-error' : ''; ?>">
+                            <p>Tu Correo</p>
+                            <input type="email" name="correo" class="form-control" value="<?php echo $correo; ?>">
+                            <span class="help-block"><?php echo $correo_err;?></span>
+                        </div> 
+
+                        <div class="form-group <?php echo (!empty($telefono_err)) ? 'has-error' : ''; ?>">
+                            <p>Tu Numero De Telefono</p>
+                            <input type="text" name="telefono" class="form-control" value="<?php echo $telefono; ?>">
+                            <span class="help-block"><?php echo $telefono_err;?></span>
+                        </div>  
+
+                        <div class="form-group <?php echo (!empty($mensaje_err)) ? 'has-error' : ''; ?>"> 
+                            <p>Tu Mensaje</p>
+                            <textarea name="mensaje" class="form-control"><?php echo $mensaje; ?></textarea>
+                            <span class="help-block"><?php echo $mensaje_err;?></span>
+                            
+                        </div>    
+                            <input type="submit" value="Enviar">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 

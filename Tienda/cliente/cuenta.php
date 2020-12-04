@@ -1,4 +1,5 @@
 <?php 
+
 //abrimos la sesión
 session_start();
  
@@ -11,7 +12,11 @@ if (!isset($_SESSION['cliente']))
 
 $user=$_SESSION['cliente'];
 
-$sql="SELECT * FROM cliente where id=$user"; 
+$sql ="SELECT * FROM cliente where id=$user"; 
+// $conexion = null;
+// $res =$conexion -> mysqli_query($sql);
+// $rowultado = $resultado -> fetch_assoc();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,7 +84,54 @@ $sql="SELECT * FROM cliente where id=$user";
     </section>
 </header>
 <!-- formulario -->
-
+<?php
+                    // Include config file
+                    require_once "config.php";
+                    
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM cliente WHERE $user = email";
+                    if($result = mysqli_query($link, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo "<table class='table table-bordered table-striped'>";
+                                    echo "<tr>";
+                                        // echo "<th>#</th>";
+                                        echo "<th>Documento</th>";
+                                        echo "<th>Nombre</th>";
+                                        echo "<th>Direccion</th>";
+                                        echo "<th>Telefono</th>";
+                                        echo "<th>Correo</th>";
+                                    echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<tr>";
+                                        // echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['documento'] . "</td>";
+                                        echo "<td>" . $row['name'] . "</td>";
+                                        echo "<td>" . $row['direccion'] . "</td>";
+                                        echo "<td>" . $row['telefono'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>";   
+                                            echo "<a href='update.php?id=". $row['id'] ."' title='Actualizar Producto' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                        echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";                            
+                            echo "</table>";
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo "<p class='lead'><em>No Hay Productos Registrados.</em></p>";
+                        }
+                    } else{
+                        echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                    }
+ 
+                    // Close connection
+                    mysqli_close($link);
+                    ?>
+                    <br>
+<!-- fin formulario -->
 <footer>
     <div class="footer_top">
         <div class="container">
@@ -96,7 +148,6 @@ $sql="SELECT * FROM cliente where id=$user";
                         <p><i class="fa fa-circle" aria-hidden="true"></i>Como es la vida todavia no se</p>
                     </a>
                 </div>
-
                 <div class="col-md-4">
                     <div class="footer-contact">
                         <h2>Contacto</h2>
@@ -138,5 +189,4 @@ $sql="SELECT * FROM cliente where id=$user";
     <script src="js/bootstrap.min.js"></script>
     <script src="js/active.js"></script>
 </body>
-
 </html>

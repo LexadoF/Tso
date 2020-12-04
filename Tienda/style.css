@@ -4,7 +4,14 @@
 }
 
 a {
-    text-decoration: none: !important;
+    text-decoration: none !important;
+}
+
+.container {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-top .fa.fa-wifi {

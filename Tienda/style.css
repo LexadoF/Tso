@@ -9,9 +9,9 @@ a {
 
 .container {
     /* text-align: center; */
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .header-top .fa.fa-wifi {

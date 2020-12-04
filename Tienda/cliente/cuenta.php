@@ -85,14 +85,12 @@ $sql ="SELECT * FROM cliente where id=$user";
 </header>
 <!-- formulario -->
 <?php
-                    // Include config file
-                    require_once "config.php";
-                    
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM cliente WHERE $user = email";
+    require_once "config.php";
+                $sql = "SELECT * FROM cliente where email=$user";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
+                                echo "<thead>";
                                     echo "<tr>";
                                         // echo "<th>#</th>";
                                         echo "<th>Documento</th>";
@@ -130,7 +128,6 @@ $sql ="SELECT * FROM cliente where id=$user";
                     // Close connection
                     mysqli_close($link);
                     ?>
-                    <br>
 <!-- fin formulario -->
 <footer>
     <div class="footer_top">

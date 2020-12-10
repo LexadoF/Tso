@@ -95,7 +95,7 @@
                                         <img src="img/gow.jpg" alt="">
                                         <div class="text text-center">
                                             <a href=""><h3>God Of War</h3></a>
-                                            <p>$100.000</p>
+                                            <p>$60.000</p>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@
                                         <img src="img/dark.jpg" alt="">
                                         <div class="text">
                                         <a href=""><h3>Dark Souls</h3></a>
-                                            <p>$100.000</p>
+                                            <p>$60.000</p>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                         <img src="img/demons.png" alt="">
                                         <div class="text">
                                         <a href=""><h3>Demon's Souls</h3></a>
-                                            <p>$100.000</p>
+                                            <p>$200.000</p>
                                         </div>
                                     </div>
                                 </div>

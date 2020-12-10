@@ -211,6 +211,10 @@ include 'carrito2.php';
         </div>
     </div>
 </footer>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://web.whatsapp.com/send?hola?phone=+573004577639" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+</a>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/owl.carousel.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>

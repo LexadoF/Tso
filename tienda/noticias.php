@@ -282,6 +282,10 @@
         </div>
     </div>
 </footer>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://web.whatsapp.com/send?hola?phone=+573004577639" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+</a>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>  
 <script src="js/bootstrap.min.js"></script>  
 <script src="js/active.js"></script>  
